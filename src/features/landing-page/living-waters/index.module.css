@@ -1,0 +1,37 @@
+.root {
+    align-items: center;
+    justify-content: center;
+    background: var(--damirifa-black);
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    height: auto;
+}
+
+.sectionHeading {
+    @apply md:text-4xl sm:text-2xl text-4xl;
+}
+
+.paragraph {
+    color: var(--damirifa-grey-white);
+}
+
+.playerWrapper {
+    position: relative;
+    width: 31.75rem;
+    aspect-ratio: 508 /414;
+    border-radius: 0.625rem;
+}
+
+.playerWrapper > .react-player__preview {
+    border-radius: 0.625rem !important;
+}
+
+.playerWrapper div {
+    border-radius: 0.625rem !important;
+}
+
+@media only screen and (max-width: 500px) {
+    .playerWrapper {
+        @apply w-11/12;
+    }
+}

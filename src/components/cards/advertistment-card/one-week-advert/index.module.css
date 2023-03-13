@@ -1,0 +1,89 @@
+.root {
+  width: min(100%, 395px);
+  border-radius: 5px;
+  border: 1px solid #19191f;
+  border-radius: 16px;
+  padding: 1rem 1rem 2rem 1rem;
+  height: 389px;
+}
+
+.advertImage {
+  aspect-ratio: 363/182;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+.textBoxRoot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.textBoxRoot .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.content b {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.0041em;
+  color: #efefef;
+}
+.content p {
+  width: fit-content;
+  height: fit-content;
+}
+.content a {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.0041em;
+  color: #efefef;
+  opacity: 0.7;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+  margin-top: 1rem;
+}
+.header h5 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.0041em;
+
+  color: #efefef;
+}
+.header svg {
+  color: #777777;
+}
+.textBoxRoot button {
+  margin-left: auto;
+  color: #777777;
+}
+.paragraph {
+  padding-top: 12px;
+  padding-bottom: 36px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.0041em;
+  color: #efefef;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 550px) {
+  /* .advertImage {
+    width: 100%;
+    height: 40px;
+  } */
+}

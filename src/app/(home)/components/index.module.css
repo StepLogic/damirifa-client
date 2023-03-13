@@ -1,0 +1,38 @@
+.root {
+    position: relative;
+}
+
+.appContainer {
+    padding-top: var(--navbar-height);
+    padding-left: env(safe-area-inset-left); /* Apply safe area */
+    padding-right: env(safe-area-inset-right);
+}
+
+.noPadding {
+    padding-top: 0;
+}
+
+.floatingButton {
+    /* margin: 5px 0; */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #66676b !important;
+    opacity: 1;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 50% !important;
+    text-align: center;
+    font-size: 26px !important;
+    z-index: 95;
+    color: white !important;
+}

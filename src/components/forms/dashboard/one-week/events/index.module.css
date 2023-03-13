@@ -1,0 +1,40 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  @apply pb-10;
+}
+
+.header {
+  font-style: normal;
+  font-weight: 600;
+  /* font-size: 15px; */
+  line-height: 140%;
+  /* identical to box height, or 21px */
+  letter-spacing: 0.0041em;
+  color: var(--clr-black-100);
+}
+
+.eventItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: auto;
+}
+
+.createButton {
+  margin-left: auto;
+  margin: 2rem 0 2rem auto;
+  width: min(9.8125rem, 100%);
+  height: 2.375rem;
+  padding: 0.4375rem 1.25rem;
+}
+
+.createButton span {
+  margin-left: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.0781rem;
+  text-transform: capitalize;
+  color: #525252;
+}

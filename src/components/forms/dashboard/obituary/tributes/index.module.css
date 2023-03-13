@@ -1,0 +1,124 @@
+.fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.root {
+  padding-bottom: 1rem;
+}
+
+.input {
+  width: 100% !important;
+  height: 3.5rem;
+  margin: 1rem 0;
+}
+
+.nameRow {
+  display: flex;
+  flex-direction: row;
+  /* margin: 1rem 0; */
+}
+
+.nameRow .input {
+  width: 50% !important;
+  margin-right: 1rem;
+}
+
+.textArea {
+  width: 100%;
+  aspect-ratio: 10/4;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  --border-color: var(--clr-blue-100);
+  --color: var(--clr-blue-100);
+}
+
+.header {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  /* line-height: 140%; */
+  letter-spacing: 0.0041em;
+  color: #131313;
+  margin: 1rem 0;
+}
+
+.dropzone {
+  aspect-ratio: 10 / 2;
+  border: 2px dashed #e0999b;
+}
+
+.createButton {
+  margin-left: auto;
+  width: min(9.8125rem, 100%);
+  height: 2.375rem;
+  padding: 0.4375rem 1.25rem;
+}
+
+.createButton span {
+  margin-left: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.0781rem;
+  text-transform: capitalize;
+  color: #525252;
+}
+
+.addTributeGrid {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  place-items: center;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .addTributeGrid {
+    display: flex;
+    /* grid-template-columns: 1fr; */
+    flex-direction: column-reverse;
+    place-items: center;
+    gap: 1rem;
+  }
+}
+
+.searchField {
+  /* background: red; */
+  width: 100%;
+  background: #ffffff;
+  border: 0.0625rem solid #f5f5f6;
+  box-shadow: 0rem 0.25rem 3.375rem rgba(165, 170, 181, 0.1);
+  border-radius: 0.375rem;
+  height: 2.625rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: min(5%, 0.875rem);
+}
+
+.searchField .textfield {
+  border: none;
+  /* background: red; */
+  height: 2.625rem;
+  font-weight: 400;
+  font-size: 1rem;
+  /* identical to box height */
+
+  color: #969eae;
+}
+
+.searchField svg {
+  color: #a5aab5;
+  font-size: 1.4rem;
+}
+
+.items {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.125rem;
+}

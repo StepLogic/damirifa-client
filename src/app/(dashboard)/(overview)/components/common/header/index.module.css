@@ -1,0 +1,228 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: var(--clr-grey-200);
+  padding-left: 52px;
+  padding-right: 19px;
+  width: 100%;
+  @apply lg:justify-between;
+}
+.search {
+  @apply ml-auto flex flex-row items-center lg:ml-0;
+}
+.search input {
+  /* background: red; */
+  width: 100%;
+  height: 100%;
+  padding-left: 1.5rem;
+  background: rgba(0, 0, 0, 0);
+}
+
+.search input::placeholder {
+  color: var(--clr-grey-300);
+}
+
+.damirifaTextLogo {
+  font-family: "Cabin", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--clr-primary-300);
+}
+
+.profileImage {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background: var(--clr-primary-300);
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.profileImage p {
+  color: white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+}
+
+.profileImage::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 0.5625rem;
+  height: 0.5625rem;
+  z-index: 5;
+  background: #62b56a;
+  border-radius: 50%;
+  bottom: 0.1rem;
+  right: 0.1rem;
+  box-shadow: 0px 0px 0rem 0.1rem var(--clr-secondary-600);
+}
+
+/* alternate styling  for announcement header*/
+.caret {
+  color: white;
+  font-size: 2rem;
+}
+
+.announcementDropdown {
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  margin-left: 2rem;
+  grid-template-columns: [a-start] 4fr [a-end b-start] 1fr [b-end];
+  gap: 0 1.6625rem;
+  grid-template-rows: [c-start] 1fr [c-end d-start] 0.5fr [d-end];
+}
+
+.announcementDropdown p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 140%;
+  /* or 25px */
+  letter-spacing: 0.0041em;
+  color: var(--clr-secondary-600);
+}
+
+.announcementDropdown svg {
+  /* background: white; */
+  display: flex;
+  margin: auto;
+  color: #d3d3d3;
+}
+
+.announcementDropdown .pill {
+  grid-column: a-start/a-end;
+  grid-row: d-start/d-end;
+  text-decoration: none;
+  padding: 3px 9px;
+  width: 65px;
+  height: 20px;
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  /* identical to box height */
+  letter-spacing: 1.25px;
+  background: #9e1417;
+  border-radius: 100px;
+  color: white;
+  display: grid;
+  place-items: center;
+  text-transform: capitalize;
+}
+
+.publishNotification {
+  margin-left: auto;
+  margin-right: min(1rem, 5%);
+  display: inline-flex;
+  align-items: center;
+}
+
+.publishNotification p {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.0781rem;
+  color: white;
+}
+
+.publishNotification .toggle {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: #9e1417;
+  margin-right: 0.5rem;
+}
+
+.dropdownButton {
+  width: 44px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Background/Mystic 100% */
+  border: 1px solid #e1e8eb;
+  /* Elevation 00 dp */
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.12))
+    drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.14))
+    drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.2));
+  border-radius: 9px;
+}
+
+.dropdownButton svg {
+  color: white;
+}
+
+.hamburger {
+  display: none!important;
+}
+
+@media only screen and (max-width: 800px) {
+  .root {
+    /* display: flex;
+        flex-direction: row; */
+    /* padding: 0; */
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+  }
+
+  .hamburger {
+    display: block;
+    --padding-x: 0.5rem;
+    --padding-y: 0.5rem;
+    margin-right: 1rem;
+  }
+
+  .hamburger svg {
+    color: var(--clr-primary-300);
+  }
+
+  .search {
+    margin-left: auto;
+    grid-column-start: 5;
+    grid-column-end: 10;
+    width: auto;
+  }
+
+  .createButton {
+  }
+
+  .createButton span {
+    /* display: none; */
+    @apply !hidden lg:block;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .search {
+    margin-left: auto;
+    grid-column-start: 9;
+    grid-column-end: 10;
+    width: 100%;
+  }
+
+  .search input {
+    display: none;
+  }
+
+  .createButton {
+    grid-column-start: 11;
+    grid-column-end: 12;
+  }
+
+  .createButton p {
+    display: none;
+  }
+}

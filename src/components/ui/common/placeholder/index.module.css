@@ -1,0 +1,5 @@
+.root {
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(1px);
+    @apply animate-pulse;
+}

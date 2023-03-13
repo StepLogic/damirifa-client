@@ -1,0 +1,79 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    height: auto;
+}
+
+.p {
+    font-weight: 500;
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
+    /* or 141% */
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.pricePill {
+    width: 6.9375rem;
+    height: 2.5rem;
+    --background-color: rgba(131, 0, 9, 0.1);
+    --color: black;
+    border-radius: 1.875rem;
+    border: none;
+}
+
+.privateMessage {
+    width: 100%;
+    aspect-ratio: 470/199;
+}
+
+.underline {
+    text-decoration: underline !important;
+    padding-bottom: 0.5rem;
+}
+
+.inputGroup {
+    height: 3.125rem;
+    background: rgba(228, 228, 228, 0.5);
+    border: 1.5px solid #830009;
+    border-radius: 5px;
+    padding: 0 min(4%, 1.875rem);
+    display: flex;
+    flex-direction: row;
+}
+
+.inputPreappend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8125rem 0;
+}
+
+.input {
+    background: none;
+    appearance: none;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.inputGroup:focus-within {
+    border: 1px solid var(--damirifa-red-2);
+}
+
+.border-right {
+    border-right: 1.5px solid rgba(0, 0, 0, 0.3) !important;
+}

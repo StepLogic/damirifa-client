@@ -1,0 +1,31 @@
+/**
+*Project:Traceability Platform
+*File:radio
+*Created by KojoGyaase 
+*Copyright Bentil**/
+.root {
+    display: flex;
+    height: 18px;
+    width: 18px;
+}
+
+.input {
+    display: none;
+}
+
+.input ~ div {
+    display: block;
+    width: 16px;
+    height: 16px;
+    box-shadow: #717171 0 0 0 2px;
+    border-radius: 50%;
+    background: none;
+    transition: all 10ms;
+}
+
+.input:checked ~ div {
+    background: #ba181b;
+    box-sizing: border-box;
+    border: 2px solid white;
+    box-shadow: #ba181b 0 0 0 2px;
+}

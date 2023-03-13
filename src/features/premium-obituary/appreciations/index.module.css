@@ -1,0 +1,211 @@
+.appreciationList {
+    @apply flex flex-col gap-10;
+    max-height: 489px;
+    height: auto;
+    min-height: 250px;
+    overflow-y: auto;
+}
+
+/*
+.appreciationBackground {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  border-radius: 20px !important;
+  display: inline-block;
+  place-items: center;
+} */
+
+.appreciation {
+    background: #790008;
+    color: white;
+    border-radius: 20px;
+    @apply py-8 px-6 relative;
+}
+
+.appreciation:hover {
+    box-shadow: 0 0 0.25rem 0.01px var(--damirifa-red);
+}
+
+.appreciation p {
+    @apply text-lg py-2;
+}
+
+.root {
+    @apply w-full px-5 lg:px-0;
+    border-radius: 20px 20px 20px 20px;
+    --height: 80vh;
+}
+
+.image {
+    width: fit-content;
+    border-radius: 8px;
+    @apply flex-none mr-2;
+}
+
+/* .appreciationList {
+  @apply flex flex-col gap-10 pr-2;
+  height: calc(0.73 * var(--height));
+} */
+.appreciationList::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50px;
+}
+
+/* Track */
+.appreciationList::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+}
+
+/* Handle */
+.appreciationList::-webkit-scrollbar-thumb {
+    background: #555;
+    height: 40px;
+    border-radius: 100px;
+}
+
+/* Handle on hover */
+.appreciationList::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* .appreciationList::-webkit-scrollbar-button {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.appreciationList::-webkit-scrollbar-button:hover {
+  color: white;
+} */
+
+.appreciation {
+    background: #790008;
+    color: white;
+    border-radius: 20px;
+    @apply py-8 px-6 relative cursor-pointer;
+}
+
+.appreciation p {
+    @apply text-lg py-2;
+}
+
+.icon {
+    width: fit-content;
+    @apply flex-none mr-10;
+}
+
+.hoverIcon {
+    position: absolute;
+    z-index: 10;
+}
+
+.zUp {
+    z-index: 4;
+    position: absolute;
+    top: -0.2rem;
+    left: 0.5rem;
+}
+
+.zDown {
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+    transform: rotateZ(270deg);
+    @apply ml-auto;
+}
+
+.zUp svg {
+    fill: rgba(0, 0, 0, 0.9);
+}
+
+.root {
+    background: rgb(245, 246, 250);
+    border-radius: 5px;
+}
+
+/* .appreciationList {
+  @apply flex flex-col gap-10;
+  max-height: 531px;
+  height: auto;
+  min-height: 400px;
+  overflow-y: auto;
+} */
+.fadedBottom {
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(
+            to top,
+            rgba(251, 251, 251, 1) 0%,
+            rgba(251, 251, 251, 0) 100%
+    );
+}
+
+.appreciationList {
+    @apply flex flex-col gap-10;
+    max-height: 31.25rem;
+    height: auto;
+    min-height: 15.625rem;
+    overflow-y: auto;
+}
+
+.appreciationBackground {
+    width: 100%;
+    position: relative;
+    height: auto;
+    max-height: 39.0625rem;
+    min-height: 15.625rem;
+    border-radius: 1.25rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #790008; */
+    /* background: url("/assets/background/tribute-appreciation.jpg"); */
+    flex: 1 1 100%;
+}
+
+.appreciationImage {
+    width: 100%;
+    height: 100%;
+    max-height: 39.0625rem;
+    min-height: 15.625rem;
+    /* border-radius: 20px !important; */
+    /* @apply xl:h-30 h-80; */
+}
+
+.appreciationImage {
+    width: 100%;
+    border-radius: 20px !important;
+}
+
+.overlay {
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    background: rgba(131, 1, 11, 0.6);
+    transform: translateY(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @apply h-36 xl:h-80;
+}
+
+.overlay p {
+    color: white;
+}
+
+.backgroundOne {
+    border-radius: 5px;
+    background: var(--premium-white-shade-1);
+}
+
+.background {
+    @apply p-3;
+    border-radius: 5px;
+    background: var(--premium-white-shade-1);
+}

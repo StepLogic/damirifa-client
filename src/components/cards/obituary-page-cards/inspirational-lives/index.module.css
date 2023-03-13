@@ -1,0 +1,35 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    aspect-ratio: 348/453;
+    /* box-shadow: 0px 4px 20px rgba(73, 73, 73, 0.6); */
+    width: clamp(300px, 100%, 360px);
+    background: black;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+
+.imageWrapper {
+    aspect-ratio: 348/198;
+    width: 100% !important;
+    border-radius: 0.625rem 0.625rem 0px 0px;
+}
+
+.h2 {
+    @apply xl:text-xl md:text-lg lg:text-sm text-sm xl:my-2 my-1;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.p {
+    /* width: ; */
+    /* font-size: 1rem */
+    @apply xl:text-lg lg:text-xs md:text-lg text-xs;
+    line-height: 1.188rem;
+    color: rgb(74, 74, 74);
+    text-align: start;
+    margin-bottom: 1rem;
+}

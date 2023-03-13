@@ -1,0 +1,97 @@
+.root {
+    --background-color: var(--damirifa-red);
+    --color: var(--damirifa-white);
+    --transition-timing: 0.1s;
+    --border-width: 2px;
+    --border-radius: 10px;
+    --border-style: solid;
+    --shadow-color: none;
+    --border-color: none;
+    --shadow-spread: 0.5rem;
+    --shadow-blur: 0.01px;
+    --hover-scale: 1.01;
+    --active-scale: 0.99;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+    color: var(--color);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-timing);
+    cursor: pointer;
+    @apply flex-auto;
+}
+
+.root:hover {
+    transform: scale(var(--hover-scale));
+    transition: all var(--transition-timing) linear;
+    box-shadow: 0 0 var(--shadow-spread) var(--shadow-blur) var(--shadow-color);
+}
+
+.root:active {
+    transform: scale(var(--active-scale));
+    transition: all var(--transition-timing) linear;
+}
+
+.primary {
+    --background-color: var(--damirifa-red);
+    --color: white;
+}
+
+.icon {
+    aspect-ratio: 1;
+    --background-color: none;
+    --border-width: none;
+    --border-style: none;
+    --color: var(--background-color);
+}
+
+.secondary {
+    --background-color: var(--damirifa-red-2);
+    --color: white;
+}
+
+.white {
+    --background-color: var(--damirifa-white);
+    --color: var(--damirifa-red-2);
+}
+
+.outline {
+    --background-color: none;
+    --color: var(--damirifa-red-2);
+    --border-color: var(--damirifa-red);
+    --shadow-color: var(--damirifa-red);
+}
+
+.md {
+    width: min(75vw, 12.5rem);
+    height: 2.8125rem;
+    @apply flex-none;
+}
+
+.lg {
+    width: min(18.75rem, 90vw);
+    height: 2.8125rem;
+    @apply flex-none;
+}
+
+.sm {
+    width: min(50vw, 9.375rem);
+    height: 2.1875rem;
+    @apply flex-none;
+}
+
+.loading {
+    pointer-events: none;
+}
+
+.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.pill {
+    border-radius: 20rem;
+}

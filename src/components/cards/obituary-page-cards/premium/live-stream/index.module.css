@@ -1,0 +1,42 @@
+.root {
+    /* width: ; */
+    height: auto;
+    min-width: 11.8229rem;
+    border-radius: 0.625rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(
+            to right,
+            rgba(90, 1, 7, 0.4),
+            rgba(140, 1, 10, 0.4)
+    ),
+    url("/assets/background/premium.jpg");
+    @apply flex items-center justify-center;
+}
+
+/* @media only screen and (max-width: 1280px) {
+  .root {
+    aspect-ratio: 1;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .root {
+    aspect-ratio: 2;
+  }
+} */
+.link {
+    @apply text-xl xl:text-base text-white;
+    text-decoration: underline !important;
+    color: white !important;
+}
+
+.button {
+    color: white;
+    border: 1px solid white;
+    width: 90px;
+}
+
+.date {
+    color: wheat;
+}

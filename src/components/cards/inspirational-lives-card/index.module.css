@@ -1,0 +1,30 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    aspect-ratio: 300/344;
+    width: min(98vw, 300px);
+    background: var(--damirifa-black);
+    box-shadow: 0 0 20px rgb(255, 255, 255, 0.2);
+    border-radius: 0.625rem;
+    margin-top: 90px;
+    position: relative;
+    cursor: pointer;
+}
+
+.imageWrapper {
+    position: absolute;
+    top: -69px;
+    z-index: 4;
+}
+
+.p {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    font-style: normal;
+    font-weight: 400;
+    @apply text-base leading-5;
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.65);
+}

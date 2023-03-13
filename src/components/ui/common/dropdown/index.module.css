@@ -1,0 +1,131 @@
+.root {
+    position: relative;
+    display: inline-block;
+}
+
+.menu {
+    --scaleY: 0;
+    --translateX: 0;
+    --translateY: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    height: auto;
+    transform-origin: top;
+    background: #f8f8f8;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    transform: scaleY(var(--scaleY)) translateX(var(--translateX));
+    transition: all 500ms;
+}
+
+.center {
+    inset: none;
+}
+
+.left {
+    --translateX: -100%;
+}
+
+.right {
+    --translateX: 100%;
+}
+
+.leftHalf {
+    --translateX: -50%;
+}
+
+.rightHalf {
+    --translateX: 50%;
+}
+
+.sm {
+    width: 158px;
+}
+
+.lg {
+    @apply w-full;
+}
+
+.menu > .closeButton {
+    margin-left: auto;
+    /* margin-right: min(5%, 0.4rem); */
+    /* padding: 0.6rem; */
+    width: 1rem;
+    margin-right: 1rem;
+}
+
+.menu > .closeButton:hover {
+    color: var(--damirifa-red);
+}
+
+.left {
+}
+
+.open {
+    --scaleY: 1;
+    transition: all 500ms;
+}
+
+.open > .menuList {
+    opacity: 1;
+    transition: all 400ms;
+}
+
+.menuList {
+    list-style: none;
+    padding: 0;
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.menu:is(.search, .default) > .closeButton {
+    display: none;
+}
+
+.menu:is(.dropdown, .search) {
+    padding-top: 0;
+}
+
+.menu:is(.dropdown, .search) {
+    border-radius: 20px;
+}
+
+.menu:is(.dropdown, .search) > .menuList > li:first-child {
+    border-radius: 20px 20px 0 0;
+}
+
+.menu:is(.dropdown, .search) > .menuList {
+    padding: 0;
+    margin: 0;
+}
+
+.menu:is(.dropdown, .search) > .menuList > li:last-child {
+    border-radius: 0 0 20px 20px;
+}
+
+.dropdown {
+}
+
+.search {
+}
+
+.default {
+    border-radius: unset;
+}
+
+.item {
+    height: min(50px, 5vw);
+    width: auto;
+    padding-left: min(2.5rem, 10%);
+    vertical-align: middle;
+}
+
+.item:hover {
+    background: rgba(184, 0, 12, 0.1);
+    cursor: pointer;
+}
+
+/* :not(.menu:focus) {
+  opacity: 0.4;
+} */

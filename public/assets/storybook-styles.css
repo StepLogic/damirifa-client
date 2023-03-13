@@ -1,0 +1,32 @@
+:root {
+  --damirifa-red: #830009;
+  --damirifa-red-2: #902e35;
+  --damrifa-white: #f8f8f8;
+  --damirifa-grey-white: rgba(255, 255, 255, 0.65);
+  --damirifa-grey-white-2: rgba(255, 255, 255, 0.8);
+  --damirifa-grey-white-3: rgba(255, 255, 255, 0.4);
+  --damirifa-light-grey: rgba(0, 0, 0, 0.75);
+  --damirifa-grey-white-4: rgba(255, 255, 255, 0.3);
+  --damirifa-grey-white-6: rgba(255, 255, 255, 0.6);
+  --damirifa-black: #121212;
+  --text-size-md: 15px;
+  --navbar-height: clamp(3.75rem, 2.5rem + 2vw, 7.375rem);
+  --navbar-background: black;
+  --premium-white-shade-1: rgb(245, 246, 250);
+  /* Dashboard colors */
+  --clr-primary-100: #660708;
+  --clr-primary-200: #a4161a;
+  --clr-primary-300: #ba181b;
+  --clr-primary-400: #e5383b;
+  --clr-primary-500: #f3e9ea;
+  --clr-secondary-100: #424242;
+  --clr-secondary-200: #b1a7a6;
+  --clr-secondary-300: #d3d3d3;
+  --clr-secondary-400: #f5f3f4;
+  --clr-secondary-500: #e0e0e0;
+  --clr-secondary-600: #ffffff;
+  --clr-black-100: #0b090a;
+  --clr-black-200: #161a1d;
+  --clr-blue-100: #203b54;
+  --clr-grey-100: #777777;
+}

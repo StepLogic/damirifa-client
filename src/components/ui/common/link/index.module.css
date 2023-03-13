@@ -1,0 +1,26 @@
+.root {
+    color: var(--color);
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+.root:is(.secondary):hover {
+    text-shadow: 0 0.0625rem 0.125rem var(--damirifa-red);
+    /* text-shadow: 1px 1px 2px black; */
+    /* transform: scale(1.05);
+    transition: scale var(--transition-timing) ease-in-out; */
+}
+
+.root:is(.primary):hover {
+    border-bottom: var(--damirifa-red) solid 0.2px;
+}
+
+.primary {
+    --color: white;
+}
+
+.secondary {
+    --color: var(--damirifa-red);
+}

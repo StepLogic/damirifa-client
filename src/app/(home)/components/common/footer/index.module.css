@@ -1,0 +1,105 @@
+.row {
+    background-color: black;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.0625rem;
+    text-align: start;
+    color: var(--damirifa-grey-white);
+}
+
+.row > span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    text-align: justify;
+    color: var(--damirifa-grey-white);
+    text-transform: capitalize;
+}
+
+.link {
+    font-style: normal;
+    font-weight: 400;
+    @apply text-white;
+    width: fit-content !important;
+    box-sizing: border-box;
+}
+
+.button {
+    border-radius: 100px;
+    background: #f8f8f8;
+    color: var(--damirifa-red);
+    border: 1px solid #f8f8f8;
+    aspect-ratio: 135/35 !important;
+}
+
+.button:hover {
+    background: var(--damirifa-red);
+    color: #f8f8f8;
+}
+
+.footerTopBar {
+    width: 100%;
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+    height: 85px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @apply items-center;
+    background-color: var(--damirifa-red);
+}
+
+@media only screen and (max-width: 400px) {
+    .footerTopBar {
+        padding: 1rem 0;
+        height: auto;
+    }
+}
+
+.heading {
+    font-size: 1.5625rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.contactInformation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.contactInformation > svg {
+    font-size: 1.4rem;
+    color: white;
+    margin-right: 0.7rem;
+}
+
+.contactInformation > span {
+    font-size: 0.9375rem;
+    line-height: 1.0625rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--damirifa-grey-white);
+}
+
+.media-logo {
+    font-size: 2.2rem;
+}
+
+.register-button {
+    padding: calc(0.25rem + 0.1vw) 1rem;
+    border-radius: 6.25rem;
+}

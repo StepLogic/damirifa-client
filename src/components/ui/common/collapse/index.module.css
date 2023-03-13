@@ -1,0 +1,7 @@
+.root {
+    width: 100%;
+    display: block;
+    transform-origin: top;
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(0.75, 0.82, 0.165, 1);
+}

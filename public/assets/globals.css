@@ -1,0 +1,377 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap'); */
+
+/* Make clicks pass-through */
+*[data-nextjs-scroll-focus-boundary] {
+  display: contents;
+}
+.debug-css * {
+  outline: 3px solid limegreen !important;
+  box-sizing: border-box;
+  background: rgba(0 100 0/0.1);
+}
+
+#nprogress {
+  pointer-events: none;
+}
+
+@layer {
+  fieldset {
+    padding: unset;
+    width: unset;
+    margin: unset;
+  }
+}
+#nprogress .bar {
+  background: var(--damirifa-red);
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px var(--damirifa-red), 0 0 5px var(--damirifa-red);
+  opacity: 1;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 50px;
+}
+/* Track */
+.scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+/* Handle */
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #555;
+
+  border-radius: 100px;
+  border: 2.5px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.025);
+}
+
+/* Handle on hover */
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.scrollbar:-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.scrollbar::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+.scrollbar {
+  /* padding-right: 5px; */
+  scrollbar-color: #555;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  /* scroll-padding-right: 20px; */
+  /* background: red; */
+}
+
+.flip-clock {
+  text-align: center;
+  perspective: 400px;
+  margin: 20px auto;
+}
+.flip-clock *,
+.flip-clock *:before,
+.flip-clock *:after {
+  box-sizing: border-box;
+}
+.flip-clock__piece {
+  display: inline-block;
+  margin: 0 5px;
+}
+.flip-clock__slot {
+  font-size: 10px;
+  color: white;
+  text-transform: uppercase;
+}
+.card__flip {
+  display: block;
+  position: relative;
+  padding-bottom: 0.72em;
+  font-size: 20px;
+  line-height: 0.95;
+}
+.card__top,
+.card__bottom,
+.card__back::before,
+.card__back::after {
+  display: block;
+  height: 0.72em;
+  color: #ccc;
+  background: #222;
+  padding: 0.25em 0.25em;
+  border-radius: 0.15em 0.15em 0 0;
+  backface-visiblity: hidden;
+  transform-style: preserve-3d;
+  width: 1.8em;
+  transform: translateZ(0);
+}
+.card__bottom {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: solid 1px #000;
+  background: #393939;
+  border-radius: 0 0 0.15em 0.15em;
+  pointer-events: none;
+  overflow: hidden;
+}
+.card__bottom::after {
+  display: block;
+  margin-top: -0.72em;
+}
+.card__back::before,
+.card__bottom::after {
+  content: attr(data-value);
+}
+.card__back {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0%;
+  pointer-events: none;
+}
+.card__back::before {
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+.flip .card__back::before {
+  -webkit-animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
+  animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transform-origin: center bottom;
+}
+.flip .card__back .card__bottom {
+  transform-origin: center top;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1);
+  animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1);
+}
+@-webkit-keyframes flipTop {
+  0% {
+    transform: rotateX(0deg);
+    z-index: 2;
+  }
+  0%,
+  99% {
+    opacity: 0.99;
+  }
+  100% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+@keyframes flipTop {
+  0% {
+    transform: rotateX(0deg);
+    z-index: 2;
+  }
+  0%,
+  99% {
+    opacity: 0.99;
+  }
+  100% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes flipBottom {
+  0%,
+  50% {
+    z-index: -1;
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  51% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 0.99;
+    transform: rotateX(0deg);
+    z-index: 5;
+  }
+}
+@keyframes flipBottom {
+  0%,
+  50% {
+    z-index: -1;
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  51% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 0.99;
+    transform: rotateX(0deg);
+    z-index: 5;
+  }
+}
+.react-pdf__Page__canvas[style] {
+  @apply mx-auto;
+}
+.equalizer-bar-1 {
+}
+@keyframes example {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
+/* Remove these to get rid of the spinner */
+/*#nprogress .spinner {*/
+/*    display: block;*/
+/*    position: fixed;*/
+/*    z-index: 1031;*/
+/*    top: 15px;*/
+/*    right: 15px;*/
+/*}*/
+
+/*#nprogress .spinner-icon {*/
+/*    width: 18px;*/
+/*    height: 18px;*/
+/*    box-sizing: border-box;*/
+/*    border: solid 2px transparent;*/
+/*    border-top-color: var(--primary-color);*/
+/*    border-left-color: var(--primary-color);*/
+/*    border-radius: 50%;*/
+
+/*    -webkit-animation: nprogress-spinner 400ms linear infinite;*/
+/*    animation: nprogress-spinner 400ms linear infinite;*/
+/*}*/
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* questrial-regular - latin */
+
+html {
+  scroll-behavior: smooth;
+}
+@supports (padding: max(0px)) {
+  body,
+  header,
+  footer {
+    padding-left: min(0vmin, env(safe-area-inset-left));
+    padding-right: min(0vmin, env(safe-area-inset-right));
+  }
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+input {
+  border: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+a {
+  text-decoration: none !important;
+}
+
+/*Dividers*/
+.divider-white-thin {
+  width: 245px !important;
+  height: 1px !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  opacity: 1 !important;
+}
+.border-20 {
+  border-radius: 20px !important;
+}
+.divider {
+  background: var(--damirifa-red) !important;
+  height: 5px !important;
+  width: 198px;
+  opacity: 1 !important;
+}
+
+.featured-announcement-section {
+  background: url("/assets/background/featured-annoucement.webp");
+  background-size: cover;
+  background-position: center;
+}
+.slider-section {
+  background: url("/assets/background/featured-annoucement.webp");
+  background-size: cover;
+  background-position: center;
+}
+.free-announcement-section {
+  display: flex;
+  flex-direction: column;
+  background: url("/assets/background/free-announcement.webp");
+  background-size: cover;
+  background-position: center;
+}
+.step-post-section {
+  background: url("/assets/background/step-to-post.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* .step-post-section::after {
+  content: url("data:image/svg+xml,%3Csvg width='60' height='59' viewBox='0 0 60 59' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 18L9.5 1M15 34L59 9M22.5 51.5L50 58' stroke='%23B8000C'/%3E%3Cpath d='M1 18L9.5 1M15 34L59 9M22.5 51.5L50 58' stroke='white' stroke-opacity='0.4'/%3E%3C/svg%3E%0A");
+  position: absolute;
+  aspect-ratio: 1;
+  right: 13%;
+} */

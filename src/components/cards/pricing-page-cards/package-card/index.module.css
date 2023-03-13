@@ -1,0 +1,126 @@
+.root {
+    --width: min(355px, 100%);
+    --height: calc(calc(554 / 335) * var(--width));
+    width: var(--width);
+    aspect-ratio: 355 / 554;
+    /* max-height: calc(var(--width) * calc(335 / 554)); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.06)
+    ),
+    var(--damirifa-black);
+    border-radius: 10px;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    aspect-ratio: 355 / 75;
+    justify-content: center;
+    background: var(--damirifa-red);
+}
+
+.cardHeader > h2 {
+    @apply text-2xl;
+    color: white;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.svg {
+    --svgWidth: calc(0.5 * var(--width));
+    --svgHeight: calc(calc(91 / 102) * var(--svgWidth));
+    width: var(--svgWidth);
+    height: var(--svgHeight);
+    margin-top: calc(0.04 * var(--height));
+}
+
+.svgImage {
+    height: calc(2 * var(--svgHeight));
+    @apply flex;
+}
+
+@media only screen and (max-width: 330px) {
+    .svgImage {
+        height: calc(1.5 * var(--svgHeight));
+        @apply flex;
+    }
+}
+
+.listItems::marker {
+    display: none;
+    content: '';
+}
+
+.marker {
+    aspect-ratio: 1;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #a24046;
+    margin-right: calc(0.09 * var(--width));
+}
+
+.listItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @apply w-full;
+
+    margin-top: calc(0.04 * var(--height));
+    margin-bottom: calc(0.04 * var(--height));
+    align-items: center;
+}
+
+.text {
+    @apply text-1sm sm:text-lg font-semibold;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.recommended {
+    position: relative;
+    box-shadow: 0px 4px 50px rgba(83, 83, 83, 0.2);
+}
+
+.badge {
+    display: none;
+}
+
+.root:is(.recommended) > .badge {
+    display: flex;
+    position: absolute;
+    top: -26px;
+    right: -8.7px;
+    width: 122px;
+    height: 32px;
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+.badge > span {
+    color: var(--damirifa-red);
+    margin: auto;
+}
+
+.priceText {
+    @apply text-2xl;
+    color: white;
+    text-align: center;
+    font: weight 600px;
+}
+
+.priceText > span {
+    font-size: 11.1704px;
+    line-height: 13px;
+}

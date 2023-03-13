@@ -1,0 +1,8 @@
+.p {
+    font-weight: 500;
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
+    /* or 141% */
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+}

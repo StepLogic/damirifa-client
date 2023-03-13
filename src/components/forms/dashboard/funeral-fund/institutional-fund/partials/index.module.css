@@ -1,0 +1,280 @@
+.root {
+    background: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5625rem 1.125rem;
+    gap: 2.0625rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125rem;
+}
+
+.header .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header .label {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 140%;
+    letter-spacing: 0.0041em;
+    color: #131313;
+}
+
+.header .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: lowercase;
+    /* padding: 0.1875rem 0.5625rem; */
+    border-radius: 6.25rem;
+    width: 3.375rem;
+    height: 1.25rem;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    /* identical to box height */
+}
+
+.header .badge[data-status="pending"] {
+    background: #ececff;
+    color: #5d5fef;
+}
+
+.header .badge[data-status="complete"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .badge[data-status="rejected"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body {
+    background: #f7d3d3;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 0.1fr 9fr;
+    place-items: center;
+    gap: 1.125rem;
+    padding: 1.5625rem 1.125rem;
+}
+
+.body p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    display: flex;
+    align-items: center;
+    color: #203b54;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer .label {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 140%;
+    /* identical to box height, or 1.25rem */
+    letter-spacing: 0.0041em;
+    color: #5e5e5e;
+}
+
+@media only screen and (max-width: 800px) {
+    .header .label {
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+    .footer .pill {
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+    .secondaryLabel {
+        font-size: 0.75rem;
+    }
+}
+
+.footer .pill {
+    background: #ddf1ea;
+    border-radius: 6.25rem;
+    padding: 0.1875rem 0.5625rem 0.1875rem 1.5625rem;
+    gap: 0.625rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: min(5.6875rem .100%);
+    position: relative;
+}
+
+.footer .pill::after {
+    position: absolute;
+    content: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.64321 4.85702C5.30192 4.51586 4.83911 4.32422 4.35655 4.32422C3.87398 4.32422 3.41117 4.51586 3.06988 4.85702L1.7828 6.14368C1.4415 6.48498 1.24976 6.94789 1.24976 7.43056C1.24976 7.91323 1.4415 8.37613 1.7828 8.71743C2.1241 9.05873 2.587 9.25047 3.06967 9.25047C3.55234 9.25047 4.01525 9.05873 4.35655 8.71743L4.99988 8.0741' stroke='%232DB182' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.35645 6.14346C4.69774 6.48461 5.16055 6.67626 5.64311 6.67626C6.12567 6.67626 6.58848 6.48461 6.92978 6.14346L8.21686 4.85679C8.55816 4.51549 8.7499 4.05259 8.7499 3.56992C8.7499 3.08724 8.55816 2.62434 8.21686 2.28304C7.87556 1.94174 7.41266 1.75 6.92999 1.75C6.44731 1.75 5.98441 1.94174 5.64311 2.28304L4.99978 2.92637' stroke='%232DB182' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    inset: 0;
+    width: 8%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(50%, 50%);
+}
+
+.dropdown {
+    /* background: red; */
+    /* background: #ffffff; */
+    box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 12.6875rem;
+    display: flex;
+    padding: 0.8125rem 1.375rem 1.0625rem 0.9375rem;
+    gap: 0.9375rem;
+}
+
+.dropdown .item {
+    border-radius: 0.1875rem;
+    width: 10.8125rem;
+    height: 1.5625rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    /* identical to box height, or 1.0625rem */
+    letter-spacing: 0.0041em;
+    color: #3c3c3c;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown .item:hover {
+    background: #eeeeee;
+    transition: all 100ms;
+}
+
+.dropdown p {
+    font-weight: 400;
+    font-size: 0.6875rem;
+    letter-spacing: 0.0041em;
+    color: #aaaaaa;
+    width: 10.8125rem;
+    height: 1.5625rem;
+}
+
+.dropdown .button span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.0041em;
+    color: #ff0005;
+    margin-left: 0.5rem;
+}
+
+.dropdown .divider {
+    border-top: 0.5px solid #e7e7e7;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.threeButton {
+    color: var(--clr-primary-300) !important;
+}
+
+.createEvent {
+    width: 100%;
+    /* background: #5e5e5e; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.1875rem 1.5rem;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.createEvent .input {
+    width: 100%;
+    /* background: white; */
+    min-height: 3.5rem;
+}
+
+.createButton {
+    margin-left: auto;
+    width: min(9.8125rem, 100%);
+    height: 2.375rem;
+    padding: 0.4375rem 1.25rem;
+}
+
+.createButton span {
+    margin-left: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: 0.0781rem;
+    text-transform: capitalize;
+    color: #525252;
+}
+
+.createButton svg {
+    color: var(--clr-primary-300);
+}
+
+.createEvent .label {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0.0041em;
+    color: #161616;
+}
+
+.createEvent .textArea {
+    height: 6rem;
+}
+
+.select[style] {
+    /* width: min(6rem, 20%); */
+    /* height: 1.6875rem; */
+    font-size: 0.6875rem;
+    line-height: 0.8125rem;
+    /* identical to box height */
+    letter-spacing: 0.0781rem;
+    --padding-y: 0;
+    color: var(--clr-grey-500);
+    /* align-items: center; */
+    justify-content: flex-start !important;
+    /* background: red; */
+}
+
+.greyText {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.textArea {
+    width: 100%;
+    height: auto;
+    min-height: 10rem;
+    --border-color: var(--clr-blue-100);
+    --color: var(--clr-blue-100);
+}

@@ -1,0 +1,32 @@
+.root {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header:active {
+  transform: scale(0.99999);
+  transition: all 1s;
+}
+
+.caret {
+  /* background: #777777; */
+  width: 15px;
+  height: 16px;
+
+  transition: all 1s;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+}
+
+.caret[data-expand="true"] {
+  transform: rotateX(180deg);
+}

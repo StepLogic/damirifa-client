@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Revalia&display=swap");
+@font-face {
+  font-family: "Questrial";
+  font-style: normal;
+  font-display: fallback;
+  src: url("/fonts/questrial/questrial-v18-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/questrial/questrial-v18-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/questrial/questrial-v18-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("/fonts/questrial/questrial-v18-latin-regular.woff") format("woff"),
+    /* Modern Browsers */
+      url("/fonts/questrial/questrial-v18-latin-regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("/fonts/questrial/questrial-v18-latin-regular.svg#Questrial")
+      format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Centaur";
+  font-style: normal;
+  font-display: fallback;
+  src: url("/fonts/centaur/CENTAUR-webfont.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("/fonts/centaur/CENTAUR-webfont.ttf") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/centaur/CENTAUR-webfont.woff2") format("woff"),
+    /* Super Modern Browsers */ url("/fonts/centaur/CENTAUR-webfont.woff")
+      format("woff"),
+    /* Modern Browsers */ url("/fonts/centaur/CENTAUR-webfont.ttf")
+      format("truetype");
+
+  /*/* Legacy iOS */
+}
+div[data-theme="app"] {
+  font-family: "Questrial", sans-serif !important;
+}
+div[data-theme="app"] .section-heading {
+  @apply md:text-4xl sm:text-2xl text-4xl;
+}
+div[data-theme="app"] .hero-heading {
+  @apply text-lg md:text-5xl;
+}
+div[data-theme="app"] .hero-paragraph {
+  @apply text-sm md:text-lg;
+}
+div[data-theme="app"] .paragraph {
+  color: red;
+}
+div[data-theme="app"] .text-damirifa-red {
+  color: var(--damirifa-red);
+}
+div[data-theme="app"] .text-damirifa-light-grey {
+  color: var(--damirifa-light-grey);
+}
+div[data-theme="app"] .text-damirifa-red-2 {
+  color: var(--damirifa-red-2);
+}
+div[data-theme="app"] .text-size-md {
+  font-size: var(--text-size-md);
+  line-height: calc(var(--text-size-md) + 2px);
+}
+div[data-theme="app"] .text-grey-white {
+  color: var(--damirifa-grey-white);
+}
+div[data-theme="app"] .text-grey-white-2 {
+  color: var(--damirifa-grey-white-2);
+}
+div[data-theme="app"] .text-grey-white-3 {
+  color: var(--damirifa-grey-white-3);
+}
+div[data-theme="app"] .text-grey-white-4 {
+  color: var(--damirifa-grey-white-4);
+}
+div[data-theme="app"] .text-grey-white-6 {
+  color: var(--damirifa-grey-white-6);
+}
+
+div[data-theme="dashboard"] {
+  font-family: "Roboto", sans-serif !important;
+}
+div[data-theme="dashboard"] .h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 6rem;
+  line-height: 7rem;
+  /* identical to box height */
+  letter-spacing: -0.0938rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3.75rem;
+  line-height: 4.375rem;
+  letter-spacing: -0.0313rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .h4 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.125rem;
+  line-height: 2.5rem;
+  /* identical to box height */
+  letter-spacing: 0.0156rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .h5 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .h6 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
+  letter-spacing: 0.0094rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .sub1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  /* identical to box height */
+  letter-spacing: 0.0094rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .sub2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.0063rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .p1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  /* identical to box height */
+  letter-spacing: 0.0313rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .p2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.0156rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.0781rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .caption {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  /* identical to box height */
+  letter-spacing: 0.025rem;
+  /* Text / Primary */
+  color: rgba(0, 0, 0, 0.87);
+}
+div[data-theme="dashboard"] .overline {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  /* identical to box height */
+  letter-spacing: 0.0938rem;
+}
+
+.fieldLabel {
+  font-style: normal;
+  font-weight: 600;
+  /* font-size: 15px; */
+  line-height: 140%;
+  /* identical to box height, or 21px */
+  letter-spacing: 0.0041em;
+  color: var(--clr-black-100);
+}

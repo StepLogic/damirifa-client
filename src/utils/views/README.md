@@ -1,0 +1,1 @@
+his folder is for page content that a heavy and affect performance,lazy load the views into pages themselves

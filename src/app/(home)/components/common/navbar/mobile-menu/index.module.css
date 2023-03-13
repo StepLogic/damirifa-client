@@ -1,0 +1,60 @@
+.root {
+    transform: scale(0);
+    transform-origin: top;
+    position: absolute;
+    z-index: 1000;
+    background: white;
+    top: var(--navbar-height);
+    left: 0;
+}
+
+.open {
+    transform: scale(1);
+}
+
+.content {
+    width: 100vw;
+    height: 50vh;
+    /* z-index: 9999; */
+}
+
+.item {
+    width: 100%;
+    height: 6vh;
+}
+
+.item:active {
+    @apply bg-gray-100;
+}
+
+.get-started {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    background: var(--damirifa-red);
+    color: white;
+}
+
+.root > button {
+    color: var(--damirifa-red);
+    background: inherit;
+    border: none;
+}
+
+.root > svg[data-expand="true"] {
+    transform: rotateZ(180deg);
+    transition: all 1s;
+}
+
+.root > svg {
+    transition: all 1s;
+    font-size: 2rem;
+}
+
+.moreButton {
+    @apply flex flex-row justify-center items-center;
+}
+
+.moreButton > svg[data-expand="true"] {
+    transform: rotateZ(180deg);
+    transition: all 1s;
+}

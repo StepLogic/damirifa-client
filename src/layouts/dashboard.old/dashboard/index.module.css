@@ -1,0 +1,33 @@
+.root {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
+.header {
+  height: 75px;
+}
+.content {
+  flex-direction: row;
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  flex: 1 1 256px;
+
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 583px) {
+  .content {
+    overflow-y: scroll;
+  }
+}

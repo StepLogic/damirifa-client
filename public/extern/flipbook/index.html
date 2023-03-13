@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/flipbook.style.css" />
+  </head>
+  <body>
+    <div id="book1"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/flipbook.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        const url = sessionStorage.getItem("flipbook-url");
+        console.log("Iframe", url);
+        $("#book1").flipBook({
+          pdfUrl: url || "sample",
+          viewMode: "3d",
+        });
+      });
+    </script>
+  </body>
+</html>

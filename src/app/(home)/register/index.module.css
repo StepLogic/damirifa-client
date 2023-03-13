@@ -1,0 +1,53 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  background: var(--damirifa-black);
+}
+.poster {
+  background: black !important;
+  height: calc(6rem + 6vw);
+}
+.poster > .divider {
+  width: 111px !important;
+}
+.section {
+  @apply mx-auto;
+  width: min(100%, 730px);
+}
+
+.fieldsetRoot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @apply w-full pb-16;
+}
+.fieldsetRoot label {
+  align-self: flex-start;
+  color: rgba(255, 255, 255, 0.7);
+}
+.root input[type="text"] {
+}
+.button {
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  width: 50%;
+  border-radius: 0;
+  flex-direction: column;
+  align-items: start;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  --text-color: white;
+}
+
+.button[data-active="true"] {
+  border-bottom: 2px solid var(--damirifa-red);
+  --text-color: var(--damirifa-red);
+}
+.button[data-active="active"] > span {
+  /* border-bottom: 2px solid var(--damirifa-red); */
+  color: var(--damirifa-red);
+}

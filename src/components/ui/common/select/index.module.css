@@ -1,0 +1,34 @@
+.icon {
+    color: rgba(13, 13, 13, 0.6);
+    @apply flex-auto;
+    transition: rotate 1s;
+}
+
+.icon[data-rotate="true"] {
+    transform: rotateX(180deg);
+}
+
+.field {
+    height: 3.125rem;
+    background: var(--background-color);
+    border-radius: 5px;
+}
+
+.secondary {
+    --background-color: rgba(228, 228, 228, 0.5);
+}
+
+.field:is(.secondary):focus-within {
+    border: 1px solid var(--damirifa-red);
+}
+
+.input {
+    height: auto;
+    width: 98%;
+    margin-left: 1px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.input:focus {
+    outline: none !important;
+}

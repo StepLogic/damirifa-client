@@ -1,0 +1,71 @@
+.root {
+  width: min(100%, 304px);
+  height: 389px;
+  padding: 21px 17px 21px 17px;
+  border-radius: 15px;
+  background: 19191f;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  background: #19191f;
+}
+.pHeading {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.0041em;
+  width: 79px;
+  color: #d8d8d8;
+  text-transform: uppercase;
+  text-align: left;
+}
+.name {
+  font-family: "Revalia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 103%;
+
+  /* or 27px */
+  text-align: center;
+  letter-spacing: 0.0041em;
+
+  color: #d4b895;
+}
+.doBToDod {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.0041em;
+
+  color: #d8d8d8;
+}
+.imageWrapper {
+  width: 151.24px;
+  height: 173.25px;
+  margin-inline: auto;
+  border-radius: 71px;
+  border: 3px solid #d4b895;
+  position: relative;
+  display: flex;
+}
+.flower {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40.47px;
+  height: 44.73px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 71px;
+}

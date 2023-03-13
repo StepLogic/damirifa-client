@@ -1,0 +1,40 @@
+/**
+ *Project:damirifa
+ *File:phone-input
+ *Created by KojoGyaase
+ *Copyright damirifa
+ **/
+.root {
+  border: 1px solid var(--clr-secondary-200);
+  border-radius: 5px;
+  height: 100%;
+  height: 3.88rem;
+}
+.root legend {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: rgb(119, 119, 119);
+}
+.root > div {
+  border: none;
+  height: 100%;
+}
+.root > div > input {
+  width: 100% !important;
+  background: inherit !important;
+  border: none !important;
+  height: 100%;
+  padding: 0 58px !important;
+}
+.root > div > input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+}
+.root > div > div[class="special-label"] {
+  display: none !important;
+  background: red;
+}
+.root ul[class="country-list"] {
+  width: 100%;
+}

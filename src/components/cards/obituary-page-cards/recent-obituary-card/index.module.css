@@ -1,0 +1,47 @@
+.root {
+  --width: min(90%, 18.75rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--width);
+  aspect-ratio: 300/477;
+  /* max-height: 477px; */
+  background: var(--damirifa-black);
+  box-shadow: 0 0 20px rgb(255, 255, 255, 0.2);
+  border-radius: 0.625rem;
+  position: relative;
+  cursor: pointer;
+  margin: 6rem auto 0 auto;
+  padding-inline: min(26px, 12.5%);
+}
+
+.imageWrapper {
+  position: absolute;
+  top: calc(-0.4 * calc(0.6 * var(--width)));
+  width: calc(0.6 * var(--width));
+  aspect-ratio: 1;
+}
+
+.pushDown {
+  margin-top: calc(0.5 * calc(0.9 * var(--width)));
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.textBox {
+  @apply w-9/10  mt-5;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 20px;
+}
+
+.textBox span {
+  text-align: left;
+  @apply text-sm font-normal;
+}

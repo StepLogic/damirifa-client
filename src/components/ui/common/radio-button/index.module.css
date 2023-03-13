@@ -1,0 +1,38 @@
+.root {
+    --border-color: white;
+    appearance: none;
+    /* border: 1px solid ; */
+    /* outline-style: solid;
+    outline-width: 3px;
+    outline-color: var(--border-color);
+    -webkit-border-radius: 50%; */
+    box-shadow: 0 0 0 3px var(--border-color);
+    -moz-border-radius: 50%;
+    background: none;
+    aspect-ratio: 1;
+    width: 0.9325rem;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.root:checked {
+    background: var(--check-color);
+    outline-color: var(--check-color);
+    box-shadow: 0 0 0 3px var(--damirifa-red);
+}
+
+.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.primary {
+    --border-color: rgba(255, 255, 255, 0.3);
+    --check-color: var(--damirifa-red);
+}
+
+.secondary {
+    --border-color: black;
+    --check-color: var(--damirifa-red);
+}

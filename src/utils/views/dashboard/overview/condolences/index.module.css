@@ -1,0 +1,37 @@
+.pill {
+  height: 40px;
+  color: #898989;
+  border-radius: 20px;
+  padding-inline: 1.625rem;
+  border: 0.5px solid rgba(121, 121, 121, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pill[data-selected="true"] {
+  color: #ba181b;
+  background: rgba(186, 24, 27, 0.1);
+  border: 0.5px solid rgba(186, 24, 27, 0.2);
+}
+
+.select {
+  background: #ffffff;
+  border: 1px solid #e7edef;
+  border-radius: 6px;
+  width: 134px;
+  height: 40px !important;
+}
+.list {
+  max-height: calc(80vh - 125px);
+  overflow-y: auto;
+  padding-bottom: 2rem;
+}
+.label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.0041em;
+  color: #161a1d;
+}

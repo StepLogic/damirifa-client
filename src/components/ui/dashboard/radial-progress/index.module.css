@@ -1,0 +1,56 @@
+.root {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.progress {
+    position: absolute;
+    /* aspect-ratio: 1; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    /* background: #e03a3d; */
+    margin: auto;
+    max-width: 2.375rem;
+    width: 100%;
+    height: 100%;
+    transition: all 50ms;
+    /* left: 0px;
+  top: 0px;
+  border-radius: 0px; */
+
+    /* transform: translate(-50%, 50%); */
+}
+
+.svgIndicatorTrack {
+    /* cx: 50%;
+    cy: 50%;
+    r: 42%;
+    fill: transparent; */
+    stroke: #d9d9d9;
+    /* stroke-width: 1px; */
+    /* max-height: 2.375rem;
+    max-width: 2.375rem; */
+    /* stroke: #d9d9d9; */
+    /* stroke: black; */
+    stroke-width: 2px;
+    transition: all 100ms;
+}
+
+.svgIndicatorIndication {
+    stroke: #e03a3d;
+    /* stroke: black; */
+    stroke-width: 2px;
+    /* animation: dash 5s linear forwards; */
+    transition: all 100ms;
+}
+
+.icon {
+    display: flex;
+    max-width: 2.375rem;
+    width: 40%;
+    height: 100%;
+    aspect-ratio: 1;
+}

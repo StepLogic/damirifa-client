@@ -1,0 +1,19 @@
+.leftButton {
+    left: 0;
+    background: inherit;
+}
+
+.leftButton > svg {
+    /* color: white; */
+    fill: white;
+}
+
+.rightButton {
+    right: 0;
+    background: inherit;
+}
+
+.rightButton > svg {
+    /* color: white; */
+    fill: white;
+}

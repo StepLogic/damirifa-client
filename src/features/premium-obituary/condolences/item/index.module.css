@@ -1,0 +1,85 @@
+.condolencesItem {
+    @apply pb-6 pt-3 px-2 hover:cursor-pointer;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid rgb(74, 74, 74, 0.1);
+}
+
+.condolencesItem:hover {
+    box-shadow: 0 0 0.25rem 0.01px rgba(185, 185, 185, 0.59);
+}
+
+.image {
+    width: fit-content;
+    width: -moz-fit-content;
+    border-radius: 8px;
+    @apply flex-none mr-2;
+}
+
+.condolencesItem p {
+    text-align: left;
+    @apply p-2 text-xs sm:text-base;
+}
+
+.condolencesItemHeading {
+    @apply flex flex-row  w-full pb-1 xl:pl-12;
+}
+
+.textbox {
+    @apply flex flex-col;
+    width: max-content;
+}
+
+.button {
+    @apply ml-auto;
+    width: 100px;
+}
+
+.name {
+    /* font-size: 1.05rem; */
+    font-weight: 700;
+    @apply md:text-base text-sm;
+}
+
+.relation {
+    font-weight: 400;
+    color: rgb(168, 0, 11);
+    @apply md:text-sm text-xs block sm:inline;
+}
+
+.days {
+    color: #4a4a4a;
+    @apply ml-auto  md:text-base text-xs  sm:mr-4 mr-0;
+}
+
+.icon {
+    width: auto;
+    @apply flex-none mr-4 lg:mr-10;
+    width: 70px;
+    height: 60px;
+}
+
+.hoverIcon {
+    position: absolute;
+    z-index: 10;
+}
+
+.zUp {
+    z-index: 4;
+    position: absolute;
+    top: -0.2rem;
+    left: 0.5rem;
+}
+
+.zDown {
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+    transform: rotateZ(270deg);
+    @apply ml-auto;
+}
+
+.zUp svg {
+    fill: rgba(0, 0, 0, 0.9);
+}

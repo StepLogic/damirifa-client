@@ -1,0 +1,238 @@
+.root {
+  height: 100%;
+  padding-inline: 1rem;
+  /* background: #6b6b6b; */
+  display: flex;
+  flex-direction: column;
+  max-width: 256px;
+  border-right: 1px solid #d3d3d3;
+  margin-bottom: 8px;
+  height: calc(100vh - 83px);
+}
+
+.root[data-collapse="1"] .item {
+  justify-content: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.root[data-collapse="1"] {
+}
+
+.root[data-collapse="1"] .item > .caption {
+  display: none;
+}
+
+.root[data-collapse="1"] .item svg {
+  font-size: 2rem;
+}
+
+.root[data-collapse="1"] .profileInformation {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.root[data-collapse="1"] .profileInformation .image p {
+  font-size: calc(1rem + 1vw);
+}
+
+.root[data-collapse="1"] .profileInformation > .email {
+  display: none;
+}
+
+.root[data-collapse="1"] .profileInformation > h6 {
+  display: none;
+}
+
+/* break at 124px */
+.profileInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  word-wrap: break-word;
+  padding-bottom: 32px;
+  padding-top: 1rem;
+  box-sizing: content-box;
+  max-height: 178.2px;
+}
+
+.profileInformation .image {
+  width: min(52%, 4.6875rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--clr-primary-300);
+  border: 2px solid #d3d3d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileInformation .image p {
+  width: fit-content;
+  font-weight: 600;
+  font-size: min(3rem, 200%);
+  line-height: 150%;
+  color: #ffffff;
+  margin: auto;
+}
+
+.profileInformation h6 {
+  margin-top: 0.5rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  /* line-height: 200%; */
+  padding: 0.1rem 0;
+  /* identical to box height, or 1.75rem */
+  text-align: center;
+  letter-spacing: 0.0041em;
+}
+
+.profileInformation .email {
+  /* color: #6b6b6b; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 140%;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+
+.caption {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 140%;
+  /* identical to box height, or 1.25rem */
+  letter-spacing: 0.0041em;
+
+  color: #595959;
+}
+
+.options {
+  margin-top: auto;
+  /* background: palevioletred; */
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: calc(100% - 178.2px);
+}
+.menu li:nth-last-child(2) {
+  margin-top: auto;
+}
+.item {
+  display: flex;
+  border-radius: 0.25rem;
+  min-height: 3rem;
+  align-items: center;
+  flex-direction: row;
+  transition: all 50ms;
+  /* background: white; */
+  padding-left: 0.9375rem;
+}
+
+.item p.caption {
+  margin-left: min(10%, 2.1875rem);
+}
+
+.item svg {
+  font-size: 1.25rem;
+  color: var(--clr-grey-100);
+}
+
+.item:active {
+  transform: scale(0.95);
+}
+
+.item:hover {
+  background: #f3e9ea;
+  color: var(--clr-primary-300);
+}
+.item[data-active="true"] {
+  background: #f3e9ea;
+  color: var(--clr-primary-300);
+}
+.item[data-active="true"] svg {
+  color: var(--clr-primary-300);
+}
+.item[data-active="true"] p {
+  color: var(--clr-primary-300);
+}
+
+.item:hover p {
+  color: var(--clr-primary-300);
+}
+
+.item:hover svg {
+  color: var(--clr-primary-300);
+}
+
+.image {
+  border-radius: 24px;
+  width: 217px;
+  aspect-ratio: 1;
+  @apply mt-2;
+}
+.packageName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.0041em;
+  color: #161a1d;
+  @apply mt-2;
+}
+.heading {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.0041em;
+  text-transform: capitalize;
+  color: #202020;
+}
+
+@media only screen and (max-width: 800px) {
+  .root {
+    position: fixed;
+    background: red;
+    left: 0;
+    background: rgba(0, 0, 0, 0.12);
+    transform: scaleX(0);
+    width: 0;
+    transform-origin: left;
+    opacity: 0;
+    z-index: 99;
+    top: 75px;
+    height: calc(100vh - 75px);
+    transition: all 100ms linear;
+    /* box-shadow: 0 0 1rem 1rem black; */
+  }
+
+  .root[data-collapse="2"] {
+    width: 70vw;
+    transform: scaleX(1);
+    transform-origin: left;
+    opacity: 1;
+    transition: transform 200ms linear, width 100ms linear, opacity 10ms linear;
+    /* box-shadow: 0 0 1rem 1rem black; */
+  }
+
+  .root .menu {
+    opacity: 0;
+    /* transition: all 100ms linear; */
+    /* box-shadow: 0 0 1rem 1rem black; */
+  }
+
+  .root[data-collapse="2"] .menu {
+    opacity: 1;
+    transition: all 100ms linear;
+    /* box-shadow: 0 0 1rem 1rem black; */
+  }
+}

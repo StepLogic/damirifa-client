@@ -1,0 +1,65 @@
+.root {
+    width: min(355px, 90vw);
+    aspect-ratio: 355 / 554;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.06)
+    ),
+    var(--damirifa-black);
+    border-radius: 10px;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    aspect-ratio: 355 / 75;
+    justify-content: center;
+    background: var(--damirifa-red);
+}
+
+.cardHeader > h2 {
+    @apply text-2xl;
+    color: white;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.listItems::marker {
+    display: none;
+    content: '';
+}
+
+.marker {
+    aspect-ratio: 1;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #a24046;
+    margin-right: 27px;
+}
+
+.listItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    align-items: center;
+}
+
+.listItem > .text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}

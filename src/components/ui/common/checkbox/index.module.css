@@ -1,0 +1,46 @@
+.root {
+    --border-color: white;
+    appearance: none;
+    border: 1px solid var(--border-color);
+    background: none;
+    aspect-ratio: 1;
+    width: 1.0652rem;
+    height: 1.0652rem;
+    border-radius: 2px;
+    position: relative;
+    display: block;
+}
+
+.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.root:checked::after {
+    content: url("data:image/svg+xml,%3Csvg stroke='white' fill='white' stroke-width='0' viewBox='0 0 1024 1024' height='1em' width='1em' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z'%3E%3C/path%3E%3C/svg%3E");
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    background: var(--damirifa-red);
+    color: white;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.root:checked {
+    border: 1px solid var(--damirifa-red);
+}
+
+.primary {
+    --border-color: var(--damirifa-grey-white-4);
+}
+
+.secondary {
+    --border-color: black;
+}

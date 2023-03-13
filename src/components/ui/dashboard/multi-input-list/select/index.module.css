@@ -1,0 +1,53 @@
+.root {
+    position: relative;
+    display: flex;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px rgba(0, 0, 0, 0.14),
+    0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.fieldset {
+    border: 0.0625rem solid #e1e8eb;
+    filter: drop-shadow(0rem 0rem 0rem rgba(0, 0, 0, 0.12)) drop-shadow(0rem 0rem 0rem rgba(0, 0, 0, 0.14)) drop-shadow(0rem 0rem 0rem rgba(0, 0, 0, 0.2));
+    border-radius: 0.25rem;
+    min-width: 115px;
+    height: 27px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dropdown {
+    background: #ffffff;
+    box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    width: 115px;
+    max-height: 14.3125rem;
+    padding: 10%;
+}
+
+.dropdownItem {
+    border-radius: 3px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdownItem:not(.selected):hover {
+    background: #ededed;
+}
+
+.selected {
+    color: white;
+    background: var(--clr-primary-300) !important;
+}
+
+.searchField {
+    height: 1.6875rem;
+    background: #ffffff;
+    border: 0.0625rem solid #f5f5f6;
+    box-shadow: 0rem 0.25rem 3.375rem rgba(165, 170, 181, 0.1);
+    border-radius: 0.375rem;
+}

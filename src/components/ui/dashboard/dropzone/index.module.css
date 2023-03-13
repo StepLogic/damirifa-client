@@ -1,0 +1,36 @@
+.root {
+    border: 2px dashed #e0999b;
+    border-radius: 8px;
+    display: flex;
+}
+
+.root > div {
+    width: 100%;
+    /* background: blue; */
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragraph {
+    font-weight: 400;
+    font-size: 0.6875rem;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.0041em;
+    color: #363636;
+}
+
+.alternate {
+    font-style: normal;
+    color: var(--clr-primary-300);
+}
+
+.icons {
+    width: 40%;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}

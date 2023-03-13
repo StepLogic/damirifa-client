@@ -1,0 +1,167 @@
+/* Redeclared css vars for storybook */
+.root {
+  --border-color: white;
+  appearance: none;
+  /* border: 1px solid ; */
+  border: var(--border-style);
+  background: var(--border-color);
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 5px;
+  height: 3.125rem;
+  @apply w-full pl-2;
+}
+
+/* .root:is(.primary):focus {
+  outline: 1px solid white;
+} */
+.root:is(.secondary):focus {
+  outline: 1px solid var(--damirifa-red);
+}
+
+/* .root:is(.primary):focus-within {
+  outline: 1px solid white;
+} */
+.root:is(.secondary):focus-within {
+  outline: 1px solid var(--damirifa-red);
+}
+
+.root:is(.secondary)::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.root:is(.primary)::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* .root:is(.tel) {
+  position: relative;
+} */
+/* .root:is(.tel) {
+  border: none;
+  background: none;
+  box-sizing: none;
+  outline: none;
+  border-radius: none;
+  height: none;
+} */
+.tel {
+  @apply w-full flex flex-row items-center justify-between;
+}
+
+.tel > input {
+  @apply flex-auto flex;
+  background: rgba(0, 0, 0, 0);
+}
+
+.tel > input:focus {
+  outline: none;
+}
+
+/* .root:-webkit-autofill:focus {
+  --border-color: white;
+  appearance: none;
+  border: var(--border-style);
+  background: var(--border-color);
+} */
+/* .root:-internal-autofill-selected {
+  background: var(--border-color) !important;
+  color: white !important;
+} */
+.phoneCode {
+  @apply flex flex-row items-center px-2;
+  width: min(40%, 5.5rem);
+}
+
+.phoneCode span {
+  @apply ml-2;
+  color: white;
+}
+
+.tooltipContainer {
+  @apply block  mr-4;
+  width: min(18%, 2rem);
+  position: relative;
+}
+
+.tooltipContainer > svg {
+  color: white;
+}
+
+.tooltipContainer > svg:hover {
+  color: var(--damirifa-red);
+}
+
+.tooltipContainer:hover > .tooltip {
+  display: flex;
+}
+
+.tooltip {
+  position: absolute;
+  top: 2rem;
+  left: -2rem;
+  z-index: 5;
+  background: var(--damirifa-black);
+  color: white;
+  padding: 0.2rem;
+  font-size: 12px;
+  display: none;
+  border-radius: 5px;
+}
+
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.label > span {
+  color: var(--damirifa-red);
+}
+
+.label:is(.primary) {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.label:is(.secondary) {
+  color: black;
+}
+
+.primary {
+  /* --border-color: rgba(255, 255, 255, 0.15); */
+  /* --background-color: rgba(255, 255, 255, 0.3); */
+  --check-color: var(--damirifa-red);
+  --border-style: none;
+  color: white;
+}
+
+.primary:is(input) {
+  background: #f8f8f8 !important;
+  color: black;
+}
+
+.secondary {
+  --border-color: rgba(228, 228, 228, 0.5);
+  --check-color: var(--damirifa-red);
+  --border-style: 1px border var(--damirifa-red);
+  color: black;
+}
+
+.error {
+  --border-style: 1px border red;
+}
+
+.showPassword {
+  position: absolute;
+  z-index: 5;
+  color: black;
+  right: 10px;
+  top: 0;
+  font-size: 1.4rem;
+  bottom: 0;
+  transform: translateY(60%);
+}

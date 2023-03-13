@@ -1,0 +1,85 @@
+/**
+ *Project:damirifa
+ *File:audio-player
+ *Created by KojoGyaase
+ *Copyright damirifa
+ **/
+.visualizer {
+  width: 100%;
+  height: 121px;
+  background: #ffffff;
+  border-radius: 9px;
+  padding-top: 20px;
+  padding-bottom: 27px;
+  padding-left: 16px;
+  padding-right: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.visualizer .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.visualizer .header p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #000000;
+  opacity: 0.8;
+}
+
+.visualizer .body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  height: 80%;
+  margin-top: auto;
+}
+
+.visualizer .body .controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.visualizer .body .timestamp {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.0041em;
+  color: #ba181b;
+}
+
+.visuals {
+  background-color: white;
+  height: 33px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  max-width: 444px;
+  overflow: hidden;
+}
+
+.bar {
+  border-radius: 2px;
+  width: 3px;
+  background-color: #bebebe;
+}
+
+.bar[data-current="true"] {
+  background-color: #ba181b;
+}

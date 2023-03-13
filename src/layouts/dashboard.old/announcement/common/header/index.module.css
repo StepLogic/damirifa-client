@@ -1,0 +1,361 @@
+.root {
+    padding-right: 1.8125rem;
+    background: hsl(359, 77%, 41%);
+    padding-left: 1.5625rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* alternate styling  for announcement header*/
+.caret {
+    color: white;
+    font-size: 2rem;
+}
+
+.announcementDropdown {
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    margin-left: 2rem;
+    grid-template-columns: [a-start] 4fr [a-end b-start] 1fr [b-end];
+    gap: 0 1.6625rem;
+    grid-template-rows: [c-start] 1fr [c-end d-start] 0.5fr [d-end];
+}
+
+.announcementDropdown p {
+    font-style: normal;
+    grid-column: a-start/a-end;
+    grid-row: c-start/c-end;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 140%;
+    /* or 25px */
+    letter-spacing: 0.0041em;
+    color: var(--clr-secondary-600);
+}
+
+.announcementDropdown svg {
+    grid-column: b-start/b-end;
+    grid-row: c-start/d-end;
+    /* background: white; */
+    display: flex;
+    margin: auto;
+    color: #d3d3d3;
+}
+
+.announcementDropdown .pill {
+    grid-column: a-start/a-end;
+    grid-row: d-start/d-end;
+    text-decoration: none;
+    padding: 3px 9px;
+    width: 65px;
+    height: 20px;
+    font-weight: 400;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    /* identical to box height */
+    letter-spacing: 1.25px;
+    background: #9e1417;
+    border-radius: 100px;
+    color: white;
+    display: grid;
+    place-items: center;
+    text-transform: capitalize;
+}
+
+.dropMenu {
+    display: flex;
+    width: 25rem;
+    height: 38.25rem;
+    /* background: red; */
+    box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    padding: 0.8125rem 0.9375rem;
+}
+
+.dropMenu .createButton {
+    margin-left: auto;
+    width: min(2.75rem, 100%);
+    height: 2.375rem;
+    padding: 0;
+    border-radius: 9px;
+}
+
+.dropMenu .createButton span {
+    margin-left: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: 0.0781rem;
+    text-transform: capitalize;
+    color: #525252;
+}
+
+.dropMenu .createButton svg {
+    color: var(--clr-primary-300);
+    font-size: 1.2rem;
+}
+
+.dropMenu .icon {
+    color: rgba(13, 13, 13, 0.6);
+    @apply flex-auto;
+    transition: rotate 1s;
+}
+
+.dropMenu .input {
+    height: 100%;
+    --padding-y: 0.98rem;
+    --padding-x: 0.8rem;
+    --width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.5) !important;
+    text-transform: unset;
+}
+
+.dropMenu .input span {
+    font-family: "Roboto" !important;
+    margin-right: 0.4rem;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 0.75rem;
+    padding: 0.4rem;
+    letter-spacing: 0;
+}
+
+.dropMenu .input::after {
+    content: url("data:image/svg+xml,%3Csvg stroke='currentColor' fill='%23000000de' stroke-width='0' viewBox='0 0 1024 1024' height='1em' width='1em' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z'%3E%3C/path%3E%3C/svg%3E");
+    position: absolute;
+    width: auto;
+    /* top: 30%;
+    bottom: 0;/ */
+    right: min(5%, 0.5rem);
+    height: 1rem;
+    transition: all 1s;
+    /* background: red; */
+}
+
+.dropMenu .input[data-expand="true"]::after {
+    transform: rotateX(180deg);
+    transition: all 1s;
+}
+
+.dropMenu .input:focus {
+    outline: none !important;
+}
+
+.dropMenu .item {
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 0.6875rem;
+    line-height: 140%;
+    letter-spacing: 0.0041em;
+    color: #3c3c3c;
+    display: flex;
+    align-items: center;
+    padding-left: 0.6875rem;
+    display: flex;
+    height: 7.0625rem;
+}
+
+.dropMenu .item:hover {
+    background: var(--clr-secondary-500);
+    transition: all 100ms;
+}
+
+.dropMenu .searchField {
+    /* background: #ffffff; */
+    border: 0.0625rem solid #f5f5f6;
+    box-shadow: 0rem 0.25rem 3.375rem rgba(165, 170, 181, 0.1);
+    border-radius: 0.375rem;
+    height: 3.125rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: min(5%, 0.875rem);
+    margin-bottom: 0.75rem;
+    border-radius: 0.9375rem;
+}
+
+.dropMenu .searchField .textfield {
+    border: none;
+    /* background: red; */
+    height: 0.8125rem;
+    font-size: 0.6875rem;
+    line-height: 0.8125rem;
+}
+
+.dropMenu .searchField svg {
+    color: #a5aab5;
+}
+
+.dropMenu .button {
+    border-radius: 3px;
+    height: 1.5625rem;
+    font-weight: 400;
+    font-size: 0.6875rem;
+    line-height: 140%;
+    letter-spacing: 0.0041em;
+    color: #3c3c3c;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    width: 100%;
+}
+
+.dropMenu .divider {
+    border-top: 0.5px solid #e7e7e7;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.dropMenu .button span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.0041em;
+    color: #ff0005;
+}
+
+.dropMenu .error {
+    --border-color: var(--clr-primary-300);
+}
+
+.publishNotification {
+    margin-left: auto;
+    margin-right: min(1rem, 5%);
+    display: inline-flex;
+    align-items: center;
+}
+
+.publishNotification p {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: 0.0781rem;
+    color: white;
+}
+
+.publishNotification .toggle {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background: #9e1417;
+    margin-right: 0.5rem;
+}
+
+.dropdownButton {
+    width: 44px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Background/Mystic 100% */
+    border: 1px solid #e1e8eb;
+    /* Elevation 00 dp */
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.12)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.14)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.2));
+    border-radius: 9px;
+}
+
+.dropdownButton svg {
+    color: white;
+}
+
+.publishDropdown {
+    /* background: red; */
+    /* background: #ffffff; */
+    box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 12.6875rem;
+    display: flex;
+    padding: 0.8125rem 1.375rem 1.0625rem 0.9375rem;
+    gap: 0.9375rem;
+}
+
+.publishDropdown .item {
+    border-radius: 0.1875rem;
+    /* width: 10.8125rem; */
+    height: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    /* identical to box height, or 1.0625rem */
+    letter-spacing: 0.0041em;
+    color: #3c3c3c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.publishDropdown .item svg {
+    color: #2db182;
+}
+
+.publishDropdown .divider {
+    border-top: 0.5px solid #e7e7e7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.publishDropdown .item:hover {
+    background: #eeeeee;
+    transition: all 100ms;
+}
+
+.publishDropdown p {
+    font-weight: 400;
+    font-size: 0.6875rem;
+    letter-spacing: 0.0041em;
+    color: #aaaaaa;
+    width: 10.8125rem;
+    height: 1.5625rem;
+}
+
+.publishDropdown .button span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.0041em;
+    color: #ff0005;
+    /* margin-left: 0.5rem; */
+}
+
+@media only screen and (max-width: 800px) {
+    .root {
+        padding-left: 0;
+    }
+
+    .announcementDropdown {
+        margin-left: 2px;
+    }
+
+    .announcementDropdown p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 140%;
+        letter-spacing: 0.0041em;
+        color: #ffffff;
+    }
+
+    .publishNotification p {
+        display: none;
+    }
+
+    .publishNotification .toggle {
+        display: none;
+    }
+
+    .dropMenu {
+        --translateX: -18%;
+        width: 20rem;
+    }
+}

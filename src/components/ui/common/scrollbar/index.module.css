@@ -1,0 +1,108 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --background-color: var(--damirifa-red);
+    --text-color: var(--damirifa-white);
+    background: var(--background-color);
+    color: var(--text-color);
+    border: 2px solid var(--background-color);
+    border-radius: 10px;
+    --transition-timing: 0.1s;
+    transition: all var(--transition-timing);
+    cursor: pointer;
+}
+
+.icon {
+    aspect-ratio: 1;
+    background: none !important;
+    border: none !important;
+    color: var(--background-color);
+    width: fit-content !important;
+    height: fit-content !important;
+    padding: 0;
+}
+
+.icon:hover {
+    box-shadow: 0 0 0.25rem 0.01px var(--background-color);
+}
+
+.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.pill {
+    border-radius: 20rem;
+}
+
+.root:hover {
+    transform: scale(1.05);
+    transition: scale var(--transition-timing) ease-in-out;
+}
+
+.root:is(.secondary):hover {
+    box-shadow: 0 0 0.25rem 0.01px var(--damirifa-red);
+}
+
+:is(.outline) {
+    border: 2px solid var(--background-color);
+}
+
+:is(.outline) > span {
+    color: var(--background-color) !important;
+}
+
+:is(.outline):hover {
+    border: 2px solid var(--text-color);
+    transform: scale(1.05);
+    transition: scale var(--transition-timing) ease-in-out;
+}
+
+:is(.outline):hover span {
+    color: var(--text-color) !important;
+}
+
+:is(.outline):hover svg {
+    color: var(--text-color) !important;
+}
+
+.root:active {
+    transform: scale(0.9);
+    transition: scale var(--transition-timing) ease-in-out;
+}
+
+.primary {
+    --background-color: var(--damirifa-red);
+    --text-color: white;
+}
+
+.secondary {
+    --background-color: var(--damirifa-red-2);
+    --text-color: white;
+}
+
+.outline {
+    --background-color: var(--damirifa-red);
+    --text-color: white;
+    background: none !important;
+}
+
+.md {
+    width: min(75vw, 12.5rem);
+    height: 45px;
+}
+
+.lg {
+    width: min(18.75rem, 90vw);
+    height: 45px;
+}
+
+.sm {
+    width: min(50vw, 9.375rem);
+    height: 35px;
+}
+
+.loading {
+    pointer-events: none;
+}

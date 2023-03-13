@@ -1,0 +1,9 @@
+# *
+User-agent: *
+# Host
+Host: https://www.diaperyard.com/
+
+# Sitemaps
+Sitemap: https://www.damirifa.com/sitemap.xml
+
+Crawl-delay: 1

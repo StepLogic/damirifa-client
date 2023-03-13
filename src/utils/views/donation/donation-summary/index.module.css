@@ -1,0 +1,120 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+}
+
+.root p {
+    font-weight: 500;
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
+    /* or 141% */
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.root .price-pill {
+    width: 6.9375rem;
+    height: 2.5rem;
+    background: rgba(131, 0, 9, 0.1);
+    border-radius: 1.875rem;
+    border: none;
+}
+
+.root .private-message {
+    width: 100%;
+    aspect-ratio: 470/199;
+}
+
+@media only screen and (min-width: 583px) {
+    .private-message {
+        width: 470px;
+        height: 199px;
+    }
+}
+
+/* .background{} */
+.button {
+    background: none;
+    border: none;
+    color: var(--damirifa-red);
+    /* width: 300px; */
+    /* @ap; */
+    display: inline-flex;
+    width: fit-content;
+    flex-grow: 0;
+}
+
+.itenary {
+    /* display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px; */
+    display: grid;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-columns: 1.6fr 1fr;
+    width: 100%;
+    margin: auto;
+}
+
+.span {
+    color: var(--damirifa-red);
+    text-transform: capitalize;
+    padding-right: 3em;
+}
+
+/* color: rgba(13, 13, 13, 0.3); */
+.value {
+    width: max-content;
+    color: rgba(13, 13, 13, 0.3) !important;
+}
+
+.value .input {
+    color: rgba(13, 13, 13, 0.3);
+}
+
+.input {
+    background: none;
+    appearance: none;
+    border: none;
+    width: min-content;
+}
+
+.editAmountField {
+    width: 3rem;
+}
+
+@media only screen and (max-width: 583px) {
+    .itenary {
+        display: grid;
+        grid-row-gap: 10px;
+        grid-column-gap: 5px;
+        grid-template-columns: max-content max-content;
+    }
+
+    .changeText {
+        display: none;
+    }
+}
+
+.inputContainer {
+    color: rgba(13, 13, 13, 0.3);
+    display: inline-flex;
+    grid-template-columns: auto auto auto;
+    width: min-content;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.input:focus {
+    outline: none;
+}

@@ -1,0 +1,124 @@
+.root {
+    position: relative;
+    --show: none;
+}
+
+.overlay {
+    display: var(--show);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    z-index: 10;
+    transform: translate(0, 10%);
+    width: max-content;
+}
+
+.popUp {
+    background: white;
+    @apply p-3;
+    box-shadow: 1px 3px 11px 3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 3px 11px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 3px 11px 3px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+}
+
+.popUpContainer {
+    @apply lg:w-48 w-full mx-auto flex;
+    max-height: 200px;
+    max-width: 200px;
+    overflow-y: scroll;
+}
+
+.popUpContainer {
+    @apply mr-2;
+}
+
+.popUp > div {
+    border-radius: 10px;
+}
+
+.popUp li {
+    @apply px-3;
+}
+
+.popUp > svg {
+    padding: 0;
+}
+
+.popUpContainer::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50px;
+    margin-right: 0.5rem;
+}
+
+/* Track */
+.popUpContainer::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+}
+
+/* Handle */
+.popUpContainer::-webkit-scrollbar-thumb {
+    /* background: #fff; */
+    background: #555;
+    height: 40px;
+    border-radius: 100px;
+}
+
+/* Handle on hover */
+.popUpContainer::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.tip {
+    background: rgba(0, 0, 0, 1);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+.top {
+    transform: translateY(-10%);
+}
+
+.bottom {
+    transform: translateY(-15%);
+}
+
+.right {
+    right: 0;
+}
+
+.left {
+    left: 0;
+}
+
+@media only screen and (min-width: 800px) {
+    .root:hover {
+        --show: block;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .overlay:not(.popUp) {
+        display: none !important;
+    }
+}
+
+@media (pointer: coarse), (hover: none) {
+    .root:focus {
+        --show: block;
+    }
+}
+
+@keyframes fade {
+    from {
+        background: rgba(0, 0, 0, 0);
+    }
+    to {
+        background: rgba(0, 0, 0, 1);
+    }
+}

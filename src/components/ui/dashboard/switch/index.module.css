@@ -1,0 +1,81 @@
+.root {
+    --slider-color: red;
+    --translateX: 0%;
+    --translateOnActive: 0%;
+    --scale: 1;
+    --track-color: rgba(0, 0, 0, 0.38);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+}
+
+.track {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 2.625rem;
+    height: 1.125rem;
+    border-radius: 0.5625rem;
+    background: var(--track-color);
+}
+
+.input {
+    display: none;
+}
+
+.slider {
+    background: white;
+    box-shadow: 0 0 0rem 0.5rem rgba(0, 0, 0, 0.12);
+    display: block;
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition: all 500ms;
+    transform: scale(var(--scale)) translateX(var(--translateX));
+}
+
+.input:checked ~ .track > .slider {
+    background: var(--slider-color);
+    --track-color: var(var(--slider-color));
+    box-shadow: unset;
+    --translateX: var(--translateOnActive);
+    transition: all 500ms;
+}
+
+.input:checked ~ .track {
+    background: var(--background);
+    /* --track-color:var(var(--slider-color)) */
+    box-shadow: unset;
+    --translateX: var(--translateOnActive);
+    transition: all 500ms;
+}
+
+.innerSlider {
+    --scale: 0.8;
+    --translateOnActive: 160%;
+}
+
+.outerSlider {
+    --scale: 1.2;
+    --translateOnActive: 100%;
+}
+
+.overflowSlider {
+    background: var(--background);
+    display: block;
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition: all 500ms;
+}
+
+.primary {
+    --background: #f7dbd4;
+    --slider-color: #f15a29;
+}
+
+.secondary {
+    --background: rgba(76, 175, 80, 0.6);
+    --slider-color: #4caf50;
+}

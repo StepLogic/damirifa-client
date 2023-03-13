@@ -1,0 +1,50 @@
+.root {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    position: relative;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border-top: 0.3rem solid white;
+    border-left: 0.3rem solid var(--damirifa-rd);
+    border-right: 0.3rem solid var(--damirifa-rd);
+    border-bottom: 0.3rem solid var(--damirifa-re);
+    animation-iteration-count: infinite;
+    animation: 1s linear infinite spinner;
+    width: 6.3rem;
+    aspect-ratio: 1;
+}
+
+.logoSvg {
+    position: absolute;
+    width: 10rem;
+    aspect-ratio: 1;
+    z-index: 4;
+    /* border-radius: 50%; */
+}
+
+.logoSvg > image {
+    width: inherit;
+    height: inherit;
+}

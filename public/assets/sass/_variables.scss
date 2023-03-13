@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////
+// Colors
+////////////////////////////////////////////////////
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: Centaur;
+  src: url('../../public/assets/fonts/CENTAUR-webfont.woff'), url(../../public/assets/fonts/CENTAUR-webfont.woff2), url(../../public/assets/fonts/CENTAUR-webfont.ttf), url(../../public/assets/fonts/CENTAUR-webfont.eot);
+}
+// Body Background
+$bodyBackground : #ffffff;
+
+// Primary Colors
+//$colorPrimary : #017BEF;
+//$colorPrimaryShade :rgba(1, 123, 239, 0.5);
+//$colorSecondary : #F4F6F8;
+//$colorSuccess: #1DCC70;
+//$colorGreen: #02BD04;
+//$colorDanger : #FF396F;
+//$colorWarning : #FFB400;
+//$colorInfo : #05D0A4;
+$damirifa-red:#8f1922;
+$damrifa-white:#F8F8F8;
+$damirifa-grey-white:rgba(255, 255, 255, 0.65);
+$damirifa-black:#121212;
+// Line Colors
+$colorLine : #DCDCE9;
+
+// Text Colors
+$colorHeading : #27173E;
+$colorText : rgb(149, 141, 158);
+$colorLight : #A9ABAD;
+
+// Border Radius
+$borderRadius: 10px;
+
+// Inputs
+$formBorderColor: #CED4DA;
+// Safearea
+$safeBottom : env(safe-area-inset-bottom);
+$safeTop : env(safe-area-inset-top);
+
+
+////////////////////////////////////////////////////
+// Dark Mode Colors
+////////////////////////////////////////////////////
+$darkmode_bodyBackground: #030108;
+$darkmode_contentBackground: #161129;
+$darkmode_colorHeading: #fff;
+$darkmode_colorText: #8f82a5;
+$darkmode_colorLight: #69587f;
+$darkmode_colorLine: #2d1f3b;
+
+
+////////////////////////////////////////////////////
+// Font Sizes
+////////////////////////////////////////////////////
+// You can change font family in _font.scss
+$fontSizeHeadingXLarge: 32px;
+$fontSizeHeadingLarge: 20px;
+$fontSizeHeading: 17px;
+$fontSize: 15px;
+$fontSizeSub: 13px;
+$fontSizeSmall: 12px;
+$fontSizeCaption: 11px;
+$fontSizeLabel: 14px;
+
+$bodyLineHeight: 1.6rem;
+$bodyLetterSpacing: 0.004em;
+

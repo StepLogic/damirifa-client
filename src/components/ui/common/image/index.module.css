@@ -1,0 +1,16 @@
+.root {
+    position: relative;
+    @apply flex-auto;
+}
+
+.border {
+    border: 3px solid rgb(182, 182, 187) !important;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.circle > img {
+    border-radius: 50%;
+}

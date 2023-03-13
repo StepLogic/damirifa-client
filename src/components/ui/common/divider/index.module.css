@@ -1,0 +1,52 @@
+.root {
+    background: var(--background-color);
+    border: none;
+    height: var(--height);
+}
+
+.primary {
+    --background-color: var(--damirifa-red);
+}
+
+.secondary {
+    --background-color: white;
+}
+
+.thin {
+    --height: 1px;
+}
+
+.veryThin {
+    --height: 0.5px;
+    background: hsla(0, 0%, 100%, 0.4) !important;
+}
+
+.thick {
+    --height: 5px;
+}
+
+.md {
+    width: 15.5rem;
+}
+
+.sm {
+    width: 15.5rem;
+}
+
+.lg {
+    width: 15.5rem;
+}
+
+@media only screen and (max-width: 583px) {
+    .md {
+        width: 15.5rem;
+    }
+
+    .sm {
+        width: 15.5rem;
+    }
+
+    .lg {
+        width: 15.5rem;
+    }
+}

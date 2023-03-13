@@ -1,0 +1,50 @@
+/**
+ *Project:damirifa
+ *File:premium
+ *Created by KojoGyaase
+ *Copyright damirifa
+ **/
+.link {
+  text-transform: uppercase;
+  box-sizing: content-box;
+}
+.tributeBackground {
+  background: url("/assets/background/premium.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.rounded {
+  border-radius: 20px;
+}
+.border {
+  border-radius: 5px;
+  border: 1px solid var(--damirifa-red);
+}
+.galleryImage {
+  aspect-ratio: 2;
+}
+.playerWrapper {
+  aspect-ratio: 2;
+}
+
+.button {
+  color: white;
+}
+@media only screen and (min-width: 1024px) {
+  .button:hover {
+    --background-color: white;
+    --text-color: var(--damirifa-red);
+    color: var(--damirifa-red);
+  }
+  .button:hover > svg {
+    fill: var(--damirifa-red);
+  }
+  .button:hover path {
+    fill: var(--damirifa-red);
+  }
+}
+
+.greyBackground {
+  background: rgb(245, 246, 250);
+}

@@ -1,0 +1,212 @@
+.root {
+  @apply w-full lg:px-0;
+  border-radius: 5px 5px 5px 5px;
+  height: auto;
+}
+
+.tribute {
+  @apply px-5 pt-5 py-10;
+  background: linear-gradient(
+      to right,
+      rgba(90, 1, 7, 0.4),
+      rgba(140, 1, 10, 0.4)
+    ),
+    url("/assets/background/premium.jpg");
+  color: white;
+  height: var(--height);
+  min-height: 500px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .tribute {
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  .tributeList {
+    border-radius: 0px 5px 5px 0px;
+  }
+}
+
+.tributeList {
+  @apply px-5 pt-5 py-10;
+  background: rgb(244, 247, 252);
+  min-height: 500px;
+  height: var(--height);
+}
+
+.list::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 50px;
+}
+
+/* Track */
+.list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+}
+
+/* Handle */
+.list::-webkit-scrollbar-thumb {
+  background: #555;
+  height: 40px;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+.list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* .list::-webkit-scrollbar-button {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.list::-webkit-scrollbar-button:hover {
+  color: white;
+} */
+
+.tributeList h2 {
+  @apply text-3xl pb-5 mb-2;
+}
+
+.heading {
+  @apply text-3xl  font-bold;
+}
+
+.headingBlock {
+  @apply sm:pl-10 flex  sm:text-left text-center flex-col sm:flex-row my-6;
+  border-left: 5px solid white;
+}
+
+/* @media only screen and (max-width: 583px) {
+  .headingBlock {
+    @apply sm:pl-10 flex flex-col sm:flex-row my-6;
+    border-left:: 5px solid white;
+  }
+} */
+.headingBlock h3 {
+  @apply xl:text-4xl  text-2xl md:text-3xl mt-2;
+}
+
+.headingBlock p {
+  @apply text-sm lg:text-base mb-2;
+}
+
+.p2 {
+  max-height: 60%;
+  @apply relative pt-5;
+  height: calc(0.6 * var(--height));
+}
+
+.image {
+  /* display: flex; */
+  width: 140px;
+  height: 140px;
+  /* flex: 1 1 10px; */
+  aspect-ratio: 1;
+  @apply flex-none sm:mr-5 mx-auto sm:ml-0;
+}
+
+.list {
+  @apply flex flex-col gap-10;
+  max-height: 531px;
+  height: auto;
+  min-height: 400px;
+  overflow-y: auto;
+  /* padding-right: 5px; */
+  scrollbar-color: #555;
+  scrollbar-width: thin;
+}
+
+.paragraph {
+  max-height: 361px;
+  min-height: 357px;
+  overflow-y: auto;
+  @apply leading-7 text-xl;
+}
+
+.paragraph::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 50px;
+}
+
+/* Track */
+.paragraph::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+}
+
+/* Handle */
+.paragraph::-webkit-scrollbar-thumb {
+  background: white;
+  height: 40px;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+.paragraph::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.paragraph::-webkit-scrollbar-button {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.paragraph::-webkit-scrollbar-button:hover {
+  color: white;
+}
+
+.fadedBottom {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(251, 251, 251, 1) 0%,
+    rgba(251, 251, 251, 0) 100%
+  );
+}
+
+.textbox {
+  @apply flex flex-col;
+  width: max-content;
+}
+
+.button {
+  @apply ml-auto;
+  width: 100px;
+}
+
+.button:hover {
+  --text-color: var(--damirifa-red);
+}
+
+.name {
+  font-size: 16.8px;
+  font-weight: 700;
+  line-height: 25.2px;
+}
+
+.relation {
+  font-size: 12.6px;
+  font-weight: 400;
+  line-height: 18.9px;
+  color: rgb(168, 0, 11);
+}
+
+.icon {
+  @apply mr-4 lg:mr-10;
+  position: relative;
+}
+
+.zUp {
+  z-index: 4;
+  position: absolute;
+  top: -1rem;
+}
+
+.zUp svg {
+  fill: rgba(0, 0, 0, 0.9);
+}

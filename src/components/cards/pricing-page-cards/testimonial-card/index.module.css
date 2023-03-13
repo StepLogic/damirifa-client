@@ -1,0 +1,80 @@
+.root {
+    width: 270px;
+    height: 430px;
+
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.95),
+            rgba(255, 255, 255, 0.95)
+    ),
+    #121212;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    margin: 1rem auto;
+}
+
+.quotes {
+    display: flex;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #b8000c;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top: 165px;
+    left: 13px;
+}
+
+.cardImage {
+    width: 270px;
+    height: 191px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.cardImage > img {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.cardContent {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    padding-left: 23px;
+    padding-right: 7px;
+}
+
+.p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    margin-bottom: 27px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.h4 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #830009;
+    margin: 0;
+}
+
+.h5 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    .root {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

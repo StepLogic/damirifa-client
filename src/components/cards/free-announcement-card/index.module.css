@@ -1,0 +1,31 @@
+.root {
+    --width: min(90%, 18.75rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    aspect-ratio: 300/247;
+    width: var(--width);
+    background: var(--damirifa-black);
+    box-shadow: 0 0 20px rgb(255, 255, 255, 0.2);
+    border-radius: 0.625rem;
+    margin-top: 90px;
+    position: relative;
+    cursor: pointer;
+    margin: 4.3rem auto 0 auto;
+}
+
+.pushDown {
+    margin-top: calc(0.7 * calc(0.6 * var(--width)));
+}
+
+.imageWrapper {
+    position: absolute;
+    top: calc(-0.5 * calc(0.6 * var(--width)));
+    width: calc(0.6 * var(--width));
+    aspect-ratio: 1;
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 1;
+}

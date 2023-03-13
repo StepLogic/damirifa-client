@@ -1,0 +1,187 @@
+.root {
+  flex: 1 1 50%;
+  position: relative;
+  border-radius: 10px;
+  height: 100%;
+  padding-bottom: 1rem;
+  transform-origin: bottom left;
+  transform: scale(1);
+  transition: all 500ms;
+  overflow: hidden;
+  /* @apply p-3; */
+}
+
+.root[data-collapse="true"] {
+  /* margin: auto auto 0 0; */
+  background: #f3e9ea;
+  width: 11.1875rem;
+  height: 7.1875rem;
+  flex: none;
+  height: 5rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 1rem;
+  padding: 0;
+  transition: all 500ms;
+  transform-origin: bottom left;
+  position: absolute;
+  bottom: 12px;
+}
+
+.root[data-collapse="true"] > .toolbar {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  padding: 0;
+  border-radius: 10px;
+  transition: all 450ms;
+  transform-origin: bottom left;
+}
+
+.root[data-collapse="true"] > .toolbar > .icons {
+  width: 0;
+  transform: scale(0);
+  transition: all 400ms;
+  transform-origin: bottom left;
+}
+
+.root[data-collapse="true"] > .frame {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: all 450ms;
+  transform-origin: bottom left;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  background: #f3e9ea;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+  /* background:# ; */
+  transition: all 450ms;
+}
+
+.label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 140%;
+
+  /* identical to box height, or 20px */
+  letter-spacing: 0.0041em;
+
+  color: #161616;
+}
+
+.toolbar .icons {
+  display: flex;
+  flex-direction: row;
+  transition: all 450ms;
+}
+
+.toolbar .icons > button > svg {
+  font-size: 0.5rem;
+}
+
+.frame {
+  /* transform: scale(0.4); */
+  /* height: 1900px;
+    width: 1366px; */
+  height: calc(100% - 80px);
+
+  /* position: absolute; */
+  /* top: -66%;
+    left: -80%; */
+  transition: all 450ms;
+}
+
+@media only screen and (max-width: 800px) {
+  .root {
+    /* flex: 1 1 50%; */
+    position: absolute;
+    border-radius: 10px;
+    height: 100%;
+    padding-bottom: 1rem;
+    transform-origin: bottom left;
+    transform: scale(1);
+    transition: all 500ms;
+    width: 90%;
+
+    z-index: 90;
+  }
+
+  .root::after {
+    content: "";
+    position: absolute;
+    width: 200vw;
+    height: 200vh;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.4);
+    top: -20%;
+    left: -20%;
+    display: block;
+  }
+
+  .root[data-collapse="true"] {
+    /* margin: auto auto 0 0; */
+    background: #f3e9ea;
+    width: 4.9375rem;
+    flex: none;
+    height: 3.2rem;
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;
+    left: 10px;
+    padding: 0;
+    transition: all 500ms;
+    transform-origin: bottom left;
+  }
+
+  .root[data-collapse="true"]::after {
+    display: none;
+  }
+
+  .root[data-collapse="true"] > .toolbar .label {
+    font-size: 0.625rem;
+    line-height: 140%;
+  }
+}
+.rootButton {
+  /* margin: auto auto 0 0; */
+  background: #f3e9ea;
+  width: 79px;
+  flex: none;
+  height: 3.2rem;
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  left: 10px;
+  padding: 0;
+  transition: all 500ms;
+  transform-origin: bottom left;
+  height: 51px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rootButton .label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 140%;
+
+  /* identical to box height, or 14px */
+  letter-spacing: 0.0041em;
+
+  color: #161616;
+}

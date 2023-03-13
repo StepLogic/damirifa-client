@@ -1,0 +1,463 @@
+.container {
+    width: 100%;
+    flex: 1 1 100%;
+    /* background: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    @apply px-3 pb-10 pt-4;
+}
+
+.controls {
+    width: fit-content;
+    width: -moz-fit-content;
+    /* width: 4rem; */
+    /* height: 2rem; */
+    /* background: white; */
+    /* margin-right: auto; */
+    margin-bottom: auto;
+    @apply ml-auto lg:mr-[60px];
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.controls[data-hidden="true"] {
+}
+
+.controls .mainControls {
+    transition: all 1s;
+    /* display: flex; */
+}
+
+.mainControls[data-hidden="true"] {
+    margin-right: unset;
+    margin-left: auto;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    animation-name: animateFade;
+    animation-duration: 0.5s;
+}
+
+.mainControls[data-hidden="false"] {
+    display: flex;
+}
+
+.expandButton {
+    background: black;
+    transition: all linear 0.5s;
+}
+
+/* .expandButton[data-hidden="true"] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 6;
+  animation-name: animate;
+  animation-duration: 0.5s;
+} */
+
+/* @keyframes animate {
+  from {
+    left: 0;
+  }
+  to {
+    left: 249px;
+  }
+} */
+
+@keyframes animateFade {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.directionControls {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* background: blue; */
+    height: 2rem;
+    width: 100%;
+    z-index: 5;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button {
+    font-size: 1rem !important;
+    padding: 0.2em 0.4em;
+    --background-color: rgba(0, 0, 0, 0.3) !important;
+    display: block;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination {
+    width: fit-content;
+    width: -moz-fit-content;
+    height: 2rem;
+    position: absolute;
+    z-index: 10;
+    bottom: 12px;
+    color: white;
+    /* background: red; */
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.view {
+    /* background: turquoise; */
+    display: flex;
+    width: 100%;
+    height: calc(80% - 6.375rem);
+    @apply mx-auto my-auto;
+    position: relative;
+}
+
+.thumbnail {
+    width: 95%;
+    height: 95%;
+    margin: auto;
+}
+
+.controlButton {
+    font-size: 1rem !important;
+    /* --background-color: var(--damirifa-white);
+    --text-color: var(--damirifa-white); */
+    color: white;
+    /* padding: 0.2em 0.6em; */
+    @apply p-1;
+    background: none;
+    /* margin-left: 0.2rem;
+    margin-right: 0.2rem; */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    aspect-ratio: 1;
+    width: 28px !important;
+    position: relative;
+}
+
+.controlButton > svg {
+    font-size: 0.8rem !important;
+}
+
+.borderRight::after {
+    content: " ";
+    background: white;
+    position: absolute;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    height: 40%;
+    right: 0;
+    transform: translateY(80%);
+    margin-right: 1px;
+    margin-left: 1px;
+    border-radius: 100rem;
+
+    /* padding-right: 0.1rem; */
+}
+
+.borderLeft::after {
+    content: " ";
+    background: white;
+    position: absolute;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    height: 40%;
+    left: 0;
+    transform: translateY(80%);
+    margin-right: 1px;
+    margin-left: 1px;
+    border-radius: 100rem;
+
+    /* padding-right: 0.1rem; */
+}
+
+/* .controlButton svg {
+  font-size: 1rem !important;
+} */
+
+.gridButton {
+    display: none;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    right: 0;
+    display: none;
+
+    @apply mx-auto;
+}
+
+.caption[data-active="true"] {
+    display: flex;
+}
+
+.caption {
+    @apply text-white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 0;
+    text-align: center;
+    @apply items-center justify-center;
+}
+
+.splide {
+    width: 100%;
+    margin-bottom: auto;
+    height: 100%;
+    position: relative;
+}
+
+.splide div {
+    height: 100%;
+}
+
+.splideTrack {
+    height: 100%;
+}
+
+.splideThumbnails {
+    max-width: 100%;
+    padding: 1rem 0;
+    display: block;
+    overflow: hidden;
+    @apply mb-auto;
+}
+
+.splidePage {
+    height: 100%;
+}
+
+.closeButton {
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.closeButton[data-hidden="true"] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 28px;
+    z-index: 6;
+    animation-name: animate;
+    animation-duration: 0.5s;
+    @apply scale-75;
+}
+
+@keyframes animate {
+    from {
+        left: 0;
+    }
+    to {
+        left: 220px;
+    }
+}
+
+.thumbnails {
+    /* backgroud: aquamarine; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.thumbnails[data-active$="-true"] {
+    display: none !important;
+}
+
+/* image style */
+/* .image {
+  height: calc(70vh - 6.375rem);
+  width: 100%;
+} */
+
+.image {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .view {
+        width: 48vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (orientation: portrait) {
+    .thumbnails[data-active$="-true"] {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (orientation: landscape) {
+    .controls {
+        margin-bottom: auto;
+        margin-top: auto;
+        @apply mr-[50px]  ml-auto;
+    }
+
+    .fullScreen {
+        display: none;
+    }
+
+    .controls[data-hidden="true"] {
+        margin-left: auto;
+        margin-right: 32px;
+    }
+
+    .controlButton {
+        /* padding: 0 0.6em; */
+    }
+
+    .closeButton[data-hidden="true"] {
+        right: 0;
+        animation-name: animate;
+        animation-duration: 0.5s;
+    }
+
+    /* @keyframes animate {
+      from {
+        left: 0;
+      }
+      to {
+        left: 20vw;
+      }
+    } */
+    .container {
+        @apply px-3 pt-3 pb-3;
+    }
+
+    .thumbnails[data-active^="false"] {
+        display: none !important;
+    }
+
+    .thumbnails {
+        height: 100vh;
+        width: 100%;
+        max-width: unset;
+        flex-wrap: wrap;
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        margin: unset;
+        display: block !important;
+        align-items: unset;
+        justify-content: unset;
+        background: rgb(38, 38, 38);
+    }
+
+    .thumbnailMarquee {
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 0.625rem;
+        /* grid-auto-rows: 6.25rem; */
+        max-height: 100vh;
+
+        padding: 1rem 0.5rem 1rem 0;
+        overflow-y: scroll;
+    }
+
+    .splideThumbnails {
+        display: none;
+    }
+
+    .thumbnails[data-active="true"] .closeGridButton {
+        position: fixed;
+        top: 0%;
+        background: white;
+        font-size: 2rem;
+        color: white;
+        background: none;
+        display: block;
+    }
+
+    .view {
+        flex-basis: 1 1;
+        margin-bottom: auto;
+        height: 80vh;
+    }
+
+    .view .image {
+        /* aspect-ratio: 1; */
+        width: 100%;
+    }
+
+    /* @supports (aspect-ratio: 1) {
+      .image {
+        aspect-ratio: 1;
+        width: 100%;
+      }
+    }
+    @supports not (aspect-ratio: 1) {
+      .image {
+        height: 70vh;
+        width: 100%;
+      }
+    } */
+    .thumbnails .closeGridButton {
+        display: none;
+    }
+
+    .marqueeItem {
+        width: 100px;
+        aspect-ratio: 1;
+    }
+
+    .marqueeItem:active,
+    .marqueeItem:hover {
+        box-shadow: 0 2px 10px 0px white;
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        padding: 1rem 0;
+        text-align: center;
+        z-index: 10;
+        left: 0;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        /* background: red; */
+        /* filter: blur(2px); */
+    }
+
+    .gridButton {
+        display: flex;
+    }
+}

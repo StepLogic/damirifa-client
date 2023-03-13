@@ -1,0 +1,203 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    width: 100vw !important;
+    height: calc(max(100vh, 500px) - var(--navbar-height));
+}
+
+.heroImage {
+    width: 100vw !important;
+    height: calc(max(100vh, 500px) - var(--navbar-height));
+}
+
+.heroImage .textResponsive {
+    font-size: clamp(16px, 15px + 0.2vw, 20px) !important;
+}
+
+.root[data-placeholder="true"] {
+    background: black;
+}
+
+.root[data-placeholder="false"]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: linear-gradient(
+            64.71deg,
+            #0d0d0d 1.84%,
+            rgba(13, 13, 13, 0.858418) 29.55%,
+            rgba(13, 13, 13, 0.2) 80.52%
+    );
+}
+
+.getStartedButton {
+    border-radius: 20px;
+    width: 170px;
+    height: 48.54px;
+    --background-color: var(--damirifa-red);
+    /* background: var(); */
+    @apply text-lg;
+}
+
+.howDamirifaWorks {
+    width: 238px;
+    height: 49.62px;
+    border-radius: 20px;
+    --background-color: var(--damirifa-red-2);
+    @apply text-lg;
+}
+
+@media only screen and (max-width: 300px) {
+    .root > span {
+        line-height: 12px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .root {
+        display: flex;
+        flex-direction: column;
+        width: 100vw !important;
+        height: calc(100vh - var(--navbar-height));
+    }
+
+    .heroImage {
+        width: 100vw !important;
+        height: calc(100vh - var(--navbar-height));
+    }
+
+    .getStartedButton {
+        @apply w-6/12;
+    }
+
+    .howDamirifaWorks {
+        @apply flex-1;
+        width: unset;
+    }
+
+    .textResponsive {
+        @apply text-base;
+    }
+}
+
+.howDamirifaWorks svg {
+    color: var(--damirifa-red-2);
+}
+
+/* @media only screen and (max-width: 600px) {
+  height: 50vh;
+  background-size: contain !important;
+  background: linear-gradient(15deg, #121212 0%, rgba(18, 18, 18, 0) 99.28%),
+    linear-gradient(0, #121212 26.04%, rgba(18, 18, 18, 0) 54.17%),
+    url(${(props: containerProps) => `'${props?.url}'`});
+} */
+/* background: linear-gradient(77.7deg, #121212 0%, rgba(18, 18, 18, 0) 99.28%),
+  linear-gradient(90deg, #121212 26.04%, rgba(18, 18, 18, 0) 54.17%),
+  url(${(props: containerProps) => `'${props?.url}'`});
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center; */
+
+.image {
+    position: relative;
+}
+
+.prompt {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: absolute;
+    z-index: 3;
+    margin-right: auto;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    padding-bottom: 84px;
+    height: calc(100vh - var(--navbar-height));
+    margin-left: 80px;
+}
+
+.prompt > h1,
+.prompt > h3 {
+    color: white;
+    text-transform: capitalize;
+    margin: 4px 0;
+}
+
+.bigText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 58px;
+    text-transform: capitalize;
+    color: #ffffff;
+    margin-bottom: 2.1rem;
+}
+
+.root > span {
+    /* //font-family: Quicksand, serif; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    /* //letter-spacing: 0.05em; */
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width: 400px) {
+    .root > span {
+        line-height: 12px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .image {
+        height: 91vh;
+    }
+
+    .heroImage img[style] {
+        object-fit: contain;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .prompt {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: end;
+        -webkit-justify-content: flex-end;
+        /* align-items:center */
+        padding-bottom: 10vh;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .root:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background: linear-gradient(15deg, #121212 0%, rgba(18, 18, 18, 0) 99.28%),
+        linear-gradient(0, #121212 26.04%, rgba(18, 18, 18, 0) 54.17%); /* W3C */
+    }
+
+    .bigText {
+        line-height: 28px;
+        font-size: 23px;
+    }
+
+    .root > button {
+        width: 50%;
+        height: 38px;
+    }
+}

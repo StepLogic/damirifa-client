@@ -1,0 +1,44 @@
+$dimensions: (
+  '0': 0,
+  '10px': 10px,
+  '20px': 20px,
+  '30px': 30px,
+  '40px': 40px,
+  '50px': 50px,
+  '60px': 60px,
+  '100px': 100px,
+  '125px': 125px,
+  '130px': 130px,
+  '135px': 135px,
+  '140px': 140px,
+  '145px': 145px,
+  '150px': 150px,
+  '200px': 200px,
+  'inherit': inherit,
+);
+
+@each $name, $value in $dimensions {
+  .h-#{$name} {
+    height: $value !important;
+  }
+
+  .w-#{$name} {
+    width: $value !important;
+  }
+
+  .pl-#{$name} {
+    padding-left: $value !important;
+  }
+  .r-top-right-#{$name} {
+    border-top-right-radius: $value !important;
+  }
+  .r-top-left-#{$name} {
+    border-top-left-radius: $value !important;
+  }
+  .r-bottom-right-#{$name} {
+    border-bottom-right-radius: $value !important;
+  }
+  .r-bottom-left-#{$name} {
+    border-bottom-left-radius: $value !important;
+  }
+}

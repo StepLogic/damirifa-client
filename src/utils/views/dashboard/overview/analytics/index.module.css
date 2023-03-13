@@ -1,0 +1,26 @@
+/**
+ *Project:damirifa
+ *File:analytics
+ *Created by KojoGyaase
+ *Copyright damirifa
+ **/
+.root {
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 24.36px;
+  flex-wrap: wrap;
+}
+.label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0.0041em;
+  color: #161a1d;
+  opacity: 0.9;
+  margin-top: 32px;
+  margin-bottom: 28px;
+}

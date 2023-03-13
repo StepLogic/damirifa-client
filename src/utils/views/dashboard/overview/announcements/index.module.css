@@ -1,0 +1,61 @@
+/**
+ *Project:damirifa
+ *File:annoucement-overview
+ *Created by KojoGyaase
+ *Copyright damirifa
+ **/
+.root {
+}
+.grid {
+  display: grid;
+  grid-template-columns: 5fr 2.6fr 2.6fr 2fr 3fr;
+}
+.announcementItem {
+  padding-top: 16px;
+  padding-bottom: 0.875rem;
+  padding-left: 1.1875rem;
+  border-bottom: 1px solid #e5e5e5;
+  @apply bg-[#F9F9F9] h-[171px];
+}
+.list {
+  min-height: 360px;
+  overflow-y: auto;
+}
+.list li:last-child {
+  border-bottom: none;
+}
+.view {
+  max-height: calc(86vh - 128px);
+  overflow-y: auto;
+  padding-bottom: 2rem;
+}
+.announcementItem .image {
+  @apply max-w-[166px] h-[141px] rounded-[24px];
+}
+.announcementItem .heading {
+  @apply text-[#161A1D] text-[18px] font-semibold tracking-[0.0041em];
+}
+.announcementItem .timeLasted {
+  @apply text-[#5E5E5E] opacity-70  text-[11px] leading-[140%];
+}
+.obituaryNotSetup {
+  background: #f9f9f9;
+  border-radius: 6px;
+  flex: 1 1 50%;
+  max-width: 520px;
+  min-width: 520px;
+  width: 520px;
+  @apply flex flex-row gap-[35px] py-[1rem] px-[12px];
+}
+.obituaryNotSetup .heading {
+  @apply text-[#161A1D] text-[18px] font-semibold tracking-[0.0041em];
+}
+.obituaryNotSetup .image {
+  max-width: 166px;
+  min-width: 166px;
+  height: 180px;
+  border-radius: 24px;
+}
+.obituaryNotSetup .timeLasted {
+  @apply text-[#5E5E5E] mt-[25px] opacity-70 text-[12px] leading-[140%];
+}

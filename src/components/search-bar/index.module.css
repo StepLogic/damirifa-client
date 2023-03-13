@@ -1,0 +1,75 @@
+.root {
+    position: absolute;
+    right: 0;
+    z-index: 200;
+    background: black;
+    align-items: center;
+    transition: opacity 0.1s scale 0.09;
+    height: var(--navbar-height);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.root[data-expand='true'] {
+    transform-origin: right;
+    transform: scaleX(1);
+    opacity: 1;
+    transition: all 1s;
+}
+
+.button {
+    transform: scaleX(0);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.input {
+    background: black !important;
+    color: white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: auto;
+    transform: scaleX(0);
+    border-radius: 0;
+    transform-origin: right;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input[data-expand='true'] {
+    transform: scaleX(1);
+    transform-origin: right;
+    opacity: 1;
+    transition: all 0.9s;
+}
+
+.button[data-expand='true'] {
+    transform: scaleX(1);
+    transform-origin: right;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.searchButton > svg {
+    aspect-ratio: 1;
+    color: white;
+    font-size: 2.2rem;
+}
+
+.searchButton {
+    aspect-ratio: 1;
+    color: white;
+    width: 1.8rem !important;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+}

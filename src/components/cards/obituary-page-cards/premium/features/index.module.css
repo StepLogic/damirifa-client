@@ -1,0 +1,37 @@
+.root {
+    /* width: ; */
+    width: 100%;
+    padding: 4rem 0;
+    flex: 1 1;
+    border-radius: 10px;
+    @apply flex items-center justify-center hover:cursor-pointer;
+    background-size: cover;
+    box-shadow: 0px 0px 12px 2px black;
+    transition: all 1s;
+}
+
+.root:hover {
+    transform: scale(1.1);
+}
+
+.root:active {
+    transform: scale(0.9);
+}
+
+.svg {
+    width: 80px;
+    height: 80px;
+}
+
+.svg image {
+    width: 80px;
+    height: 80px;
+}
+
+.overlay {
+    @apply flex flex-col items-center justify-center;
+}
+
+.overlay span {
+    @apply font-bold text-white text-center xl:text-xl lg:text-base uppercase mt-3;
+}

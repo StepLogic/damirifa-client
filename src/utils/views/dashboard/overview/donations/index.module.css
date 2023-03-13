@@ -1,0 +1,36 @@
+/**
+ *Project:damirifa
+ *File:annoucement-overview
+ *Created by KojoGyaase
+ *Copyright damirifa
+ **/
+.root {
+}
+.grid {
+  display: grid;
+  grid-template-columns: 5fr 2.6fr 2.6fr 2fr 3fr;
+}
+.announcementItem {
+  padding-top: 16px;
+  padding-bottom: 0.875rem;
+  padding-left: 1.1875rem;
+  border-bottom: 1px solid #e5e5e5;
+  @apply bg-[#F9F9F9] h-[171px];
+}
+/* .list {
+  min-height: 360px;
+  overflow-y: auto;
+} */
+.list li:last-child {
+  border-bottom: none;
+}
+.view {
+  height: calc(86vh - 128px);
+  overflow-y: auto;
+  padding-bottom: 2rem;
+}
+.list {
+  max-height: calc(80vh - 125px);
+  overflow-y: auto;
+  padding-bottom: 2rem;
+}

@@ -1,0 +1,85 @@
+.root {
+    @apply block px-6 py-6;
+    background: #4a4a4a;
+    border-radius: 20px;
+}
+
+.altText {
+    color: #a8000b;
+    font-style: normal;
+}
+
+.input {
+    background: white;
+}
+
+.input {
+    background: white;
+}
+
+.inputDropdown {
+    /* padding-left: 8px; */
+    padding: 0 8px 0 0;
+    background: white;
+}
+
+.inputDropdown > input {
+    /* padding-left: 8px; */
+    background: white;
+}
+
+.textArea {
+    aspect-ratio: 3;
+}
+
+.container {
+    @apply flex p-5 w-full;
+    aspect-ratio: 1.5;
+    background: rgb(245, 246, 250);
+    border-radius: 5px;
+}
+
+.innerContainer {
+    @apply w-full flex flex-col sm:py-0 py-5 items-center justify-center;
+    border: 2px dashed #4a4a4a46;
+    background: white;
+}
+
+.or {
+    color: rgb(116, 128, 157);
+}
+
+.icon {
+    flex-grow: unset;
+    aspect-ratio: 2/1;
+    @apply lg:w-52 w-24;
+}
+
+.textPrompt {
+    /* font-size: 18px; */
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 23px; */
+    text-align: center;
+    text-rendering: optimizelegibility;
+    white-space: normal;
+    color: rgb(85, 90, 107);
+    @apply lg:text-lg text-sm;
+}
+
+.button {
+    background-color: #a8000b;
+    @apply py-2 px-4;
+    border-radius: 5px;
+    color: white;
+}
+
+.sendButton {
+    color: white;
+}
+
+.sendButton:hover {
+    --background-color: white;
+    --text-color: var(--damirifa-red);
+    color: var(--damirifa-red);
+}

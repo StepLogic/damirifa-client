@@ -1,0 +1,72 @@
+/**
+ *Project:damirifa
+ *File:analytics-card
+ *Created by KojoGyaase
+ *Copyright damirifa
+ **/
+.root {
+  background: #f5f5f5;
+  border-radius: 6px;
+  width: 267.98px;
+  height: 160px;
+  /* display: flex;
+  flex-direction: column; */
+}
+.textBox {
+  padding: 18px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.divider {
+  height: 2px;
+  opacity: 0.05;
+  background: #000000;
+}
+
+.link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.0041em;
+  color: #065fd4;
+  opacity: 0.7;
+  margin-right: 16px;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.value {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.0041em;
+  color: #ba181b;
+}
+.title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.0041em;
+  color: #161a1d;
+  opacity: 0.6;
+}
+.criticalText {
+  color: #2da378;
+}
+.information {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #7e7e7e;
+  letter-spacing: 0.0041em;
+}

@@ -1,0 +1,61 @@
+.root {
+    @apply grid grid-cols-1 lg:pl-0 xl:translate-x-[13%] md:translate-x-[0%]  overflow-hidden lg:pr-0 lg:grid-cols-3 w-fit mx-auto container pt-10 pb-20;
+}
+
+/* @media only screen and (min-width: 768px) {
+  .root {
+    margin-left: 16%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .root {
+    margin-left: 26%;
+  }
+} */
+.item {
+    @apply flex flex-row lg:flex-col h-auto lg:max-w-xs;
+}
+
+.bubble {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    max-height: 2.5rem;
+    max-width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.375rem;
+    line-height: 1.5625rem;
+    color: white;
+    border: none;
+    background: var(--damirifa-red);
+    @apply m-1 mb-4 lg:mb-1;
+}
+
+.StepAndLine {
+    display: flex;
+    @apply flex-col lg:flex-row h-auto lg:h-20 relative;
+}
+
+.lineMobileSvg {
+    /* display: block; */
+    /* width: 100%; */
+    width: auto;
+    height: 3rem;
+}
+
+.text {
+    @apply flex flex-col ml-4 lg:ml-0  max-w-xs lg:max-w-none justify-center;
+}
+
+.heading {
+    @apply font-semibold text-white text-xl mb-3 mt-3;
+}
+
+.paragraph {
+    color: rgba(255, 255, 255, 0.65);
+    @apply font-medium text-base leading-5 pr-5 pb-4;
+}

@@ -1,0 +1,118 @@
+.fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.root {
+  padding-bottom: 5rem;
+  @apply lg:pb-0;
+  width: 100%;
+}
+
+.input {
+  width: 100% !important;
+  height: 3.5rem;
+}
+
+.descriptionField {
+  @apply grid grid-cols-1 mb-8;
+  background: #f7f7f7;
+  border-radius: 0.5625rem;
+  gap: 1.5rem;
+  padding: min(3.25rem, 10%) min(3.25rem, 10%) calc(2.5rem + 22.4px)
+    min(3.25rem, 10%);
+}
+
+.detailsField {
+  background: #f7f7f7;
+  border-radius: 9px;
+  padding-top: min(3.25rem, 10%);
+  padding-right: min(3.25rem, 10%);
+  padding-left: min(3.25rem, 10%);
+  padding-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.organizationField {
+  background: #f7f7f7;
+  border-radius: 9px;
+}
+
+.organizationField .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8125rem 2rem;
+  border-bottom: 0.5px solid #d0d0d0;
+}
+
+.createButton {
+  margin-left: auto;
+  width: min(9.8125rem, 100%);
+  height: 2.375rem;
+  padding: 0.4375rem 1.25rem;
+}
+
+.createButton span {
+  margin-left: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.0781rem;
+  text-transform: capitalize;
+  color: #525252;
+}
+
+.organizationField .list {
+}
+
+.textArea {
+  /* width: 100%;
+  height: auto;
+  min-height: 10rem;
+  margin-right: 1rem;
+  --border-color: var(--clr-blue-100);
+  --color: var(--clr-blue-100); */
+}
+
+.label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 140%;
+  letter-spacing: 0.0041em;
+  /* @apply mb.4; */
+}
+
+.secondaryLabel {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #828282;
+}
+
+@media only screen and (max-width: 800px) {
+  .label {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .secondaryLabel {
+    font-size: 0.75rem;
+  }
+}
+.listRecipients {
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.3px;
+  padding: 1rem;
+}

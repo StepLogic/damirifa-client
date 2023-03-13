@@ -1,0 +1,17 @@
+.root {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider {
+    @apply lg:w-36 md:w-2/12 w-3/12 lg:mt-3 mt-2;
+}
+
+.label {
+    color: #ffffff;
+    @apply lg:text-4xl text-2xl;
+}

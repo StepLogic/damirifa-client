@@ -1,0 +1,26 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  background: var(--damirifa-black);
+}
+.poster {
+  background: black !important;
+  height: calc(6rem + 6vw);
+}
+.poster > .divider {
+  width: 111px !important;
+}
+.section {
+  @apply mx-auto;
+  width: min(100%, 730px);
+}
+/* Redeclared css vars for storybook */
+.fields {
+  border-left: 1px solid var(--damirifa-grey-white);
+}
+@media only screen and (max-width: 1200px) {
+  /* Redeclared css vars for storybook */
+  .fields {
+    border-left: none;
+  }
+}

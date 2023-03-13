@@ -1,0 +1,4 @@
+.playerWrapper {
+    width: 80%;
+    @apply mx-auto;
+}

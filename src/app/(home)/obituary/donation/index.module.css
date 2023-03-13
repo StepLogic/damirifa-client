@@ -1,0 +1,49 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  background: var(--damirifa-black);
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+.deceasedImage {
+  width: 9.9375rem;
+  aspect-ratio: 1;
+}
+.container {
+  padding-top: 1.375rem;
+  border-radius: 10px;
+  max-width: 827px;
+  width: 95%;
+  @apply px-0;
+  /* width: 827px;
+  height: 777px; */
+
+  background: #f8f8f8;
+}
+.closeButton {
+  color: rgba(13, 13, 13, 0.3);
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  flex: none;
+}
+.closeButton:hover {
+  color: var(--damirifa-red);
+}
+.content {
+  /* max-width: 470px; */
+  @apply flex flex-col flex-auto;
+}
+.shareButton {
+  position: absolute;
+  top: -22.5px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  border: 1px solid var(--damirifa-red) !important;
+  background: white !important;
+}
+.shareButton:hover {
+  --text-color: var(--damirifa-red);
+}

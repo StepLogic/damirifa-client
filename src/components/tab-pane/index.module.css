@@ -1,0 +1,54 @@
+.root {
+  display: block;
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
+.wizard {
+  max-width: 0;
+  height: 100%;
+  align-items: stretch;
+  display: block;
+  transform: scaleX(0);
+  transition: all 100ms;
+  position: absolute;
+  opacity: 0;
+}
+
+.wizard[data-active="true"] {
+  max-width: 100%;
+  transform: scaleX(1);
+  opacity: 1;
+  transition: all 110ms;
+  position: relative;
+  height: 100%;
+}
+
+.tabBar {
+  display: flex;
+  flex-direction: row;
+}
+.tabBar li {
+  padding: 9px 16px;
+  display: block;
+
+  color: #798998;
+  @apply max-w-[72px] lg:max-w-[153px];
+}
+.tabBar li[data-active="true"] {
+  color: #ba181b;
+  border-bottom: 2px solid #ba181b;
+}
+.tabBar li p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+  text-transform: capitalize;
+}

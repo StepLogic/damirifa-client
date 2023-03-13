@@ -1,0 +1,164 @@
+.root {
+  --color: black;
+  --background-color: black;
+  --width: 100%;
+  --padding-x: 1rem;
+  --padding-y: 1rem;
+  --border-radius: 5px;
+  --shadow-width: 1px;
+  --shadow-color: red;
+  --border-width: 1px;
+  --border-color: red;
+  position: relative;
+  display: flex;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px rgba(0, 0, 0, 0.14),
+    0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.fileInput {
+  width: 100%;
+  /* background: green; */
+  position: absolute;
+  height: 100%;
+  border-radius: var(--border-radius);
+  /* min-height: 56px; */
+  background: rgba(0, 0, 0, 0);
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.fileInput input {
+  display: none;
+}
+
+.fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 3.5rem;
+  color: var(--color);
+  border-radius: var(--border-radius);
+  background: var(--background-color);
+  /* background: red; */
+  width: 100%;
+  height: 100%;
+  border: var(--border-color) solid var(--border-width);
+  padding: 1px;
+  transition: all 100ms;
+}
+
+.legend {
+  margin-left: 0.5rem;
+  visibility: var(--legend-visibility);
+  max-width: var(--legend-dimension);
+  max-height: var(--legend-dimension);
+  /* font-size: 0.4rem; */
+  line-height: 0.1rem;
+  transition: all 100ms;
+  font-size: var(--label-font);
+  display: flex;
+}
+
+.label {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  transform: translate(var(--translateX), var(--translateY));
+  transform-origin: left top;
+  transition: all 100ms;
+  color: var(--label-color);
+  font-size: var(--label-font);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primary {
+  --background-color: var(--clr-primary-500);
+  --color: var(--clr-primary-300);
+}
+
+.secondary {
+  --border-color: var(--clr-secondary-200);
+  --color: var(--clr-grey-100);
+  --label-color: rgba(0, 0, 0, 0.7);
+  --label--not-active: rgba(0, 0, 0, 0.7);
+  --active-color: var(--clr-primary-300);
+  --placeholder-color: rgba(0, 0, 0, 0.5);
+}
+
+.dark {
+  --background-color: inherit;
+  --border-color: var(--clr-secondary-500);
+  --color: var(--clr-secondary-100);
+}
+
+.dark:focus-within {
+  --border-color: var(--clr-primary-300);
+  --color: var(--clr-primary-300);
+}
+
+.dark:focus-within input {
+  color: black;
+}
+
+.fill {
+  --border-color: none;
+}
+
+.outline {
+  --background-color: inherit;
+  --label-color: var(--label-not-active-color);
+  --legend-visibility: hidden;
+  --legend-dimension: 0;
+  --translateX: 0.5rem;
+  --translateY: 0%;
+  --label-font: 1rem;
+}
+.outline.iconContainer {
+  --translateX: 2.5rem;
+}
+.outline.iconContainer .fileInput {
+  padding-left: 2.5rem;
+}
+
+/* .outline:focus-within {
+  --legend-dimension: 1000rem;
+  --translateY: -160%;
+  --label-color: var(--active-color);
+  --border-color: var(--active-color);
+  --label-font: 0.75rem;
+} */
+
+.outline[data-selected="true"] > .label {
+  --translateY: -160%;
+  --legend-dimension: 1000rem;
+  --label-font: 0.75rem;
+  --translateX: 0.5rem;
+}
+.icon {
+  position: absolute;
+  z-index: 2;
+  left: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.outline[data-selected="true"] > legend {
+  --legend-dimension: 1000rem;
+  --label-font: 0.75rem;
+}
+
+.default {
+  --background-color: inherit;
+  --border-color: none;
+}
+
+.error {
+  --label-color: var(--active-color) !important;
+  --border-color: var(--active-color);
+}

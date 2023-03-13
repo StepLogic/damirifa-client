@@ -1,0 +1,109 @@
+.pagination > li > button {
+  width: 50px;
+  height: 5px;
+  background: #f0f0f0;
+  opacity: 0.3;
+  border-radius: 10px;
+}
+.pagination > li > button[aria-selected="true"] {
+  transform: none;
+  background: #f0f0f0 !important;
+  opacity: 1;
+}
+@media only screen and (max-width: 570px) {
+  .pagination > li > button {
+    width: 10px;
+    height: 10px;
+    background: #f0f0f0;
+    opacity: 0.3;
+    border-radius: 10px;
+  }
+}
+.slider {
+  @apply bg-[#303035]  py-4 lg:py-[4vh];
+}
+
+.slider li {
+  opacity: 0.5;
+}
+
+.slider li[class~="is-active"] {
+  opacity: 1;
+}
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 25px;
+  padding: 0;
+  padding-bottom: 2rem;
+}
+.itemCards {
+  display: grid;
+  grid-template-columns: repeat(3, 308px);
+  gap: 18px;
+}
+@media only screen and (max-width: 1280px) {
+  .cardsGrid {
+    grid-template-columns: repeat(1, auto);
+    max-width: unset;
+    padding-inline: 1.5rem;
+  }
+  .advertCards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(395px, 100%));
+  }
+}
+@media only screen and (max-width: 1015px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, auto);
+  }
+  .advertCards {
+    display: unset;
+    /* grid-template-columns: repeat(1, minmax(395px, 100%)); */
+  }
+  .itemCards {
+    display: grid;
+    grid-template-columns: repeat(2, 308px);
+    gap: 18px;
+  }
+}
+@media only screen and (max-width: 895px) {
+  .cardsGrid {
+    grid-template-columns: repeat(1, auto);
+    max-width: auto;
+    padding-inline: 1.5rem;
+    /* @apply !container; */
+  }
+  .advertCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .itemCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .cardsGrid {
+    grid-template-columns: repeat(1, auto);
+    max-width: auto;
+    padding-inline: 1.5rem;
+    align-items: center;
+    place-items: center;
+    /* @apply !container; */
+  }
+  .advertCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+    place-items: center;
+  }
+  .itemCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+    place-items: center;
+  }
+}

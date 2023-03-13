@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  /* height: auto; */
+  justify-content: center;
+  height: 100%;
+  @apply w-1/2 mx-auto pb-14;
+}
+
+.heading {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.0041em;
+  color: #131313;
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  white-space: break-spaces;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #727272;
+  @apply lg:text-[17px] text-[16px];
+}
+
+.paragraphContainer {
+  background: #f7f7f7;
+  border-radius: 0.5625rem;
+  @apply p-5 lg:pb-[2.875rem];
+}
+
+.declaration {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5rem;
+  color: rgba(56, 56, 56, 0.8);
+  @apply lg:text-[18px] my-4 text-[16px];
+}
